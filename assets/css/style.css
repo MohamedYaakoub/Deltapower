@@ -1364,6 +1364,13 @@ img {
   border-radius: 0;
 }
 
+.site-header .container-fluid {
+  max-width: 1400px;     /* sets how wide the content can grow */
+  margin: 0 auto;         /* centers it horizontally */
+  padding: 0 40px;        /* adds breathing room on each side */
+  box-sizing: border-box; /* ensures padding doesn’t mess with width */
+}
+
 .site-header .navigation > .container {
   position: relative;
 }
@@ -1755,7 +1762,7 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .header-style-1 .navigation, .header-style-2 .navigation, .header-style-3 .navigation {
-    background: #1E1E2F;
+    background: #DCEFFF;
   }
   .header-style-1 .navbar-nav, .header-style-2 .navbar-nav, .header-style-3 .navbar-nav {
     margin-left: 100px;
@@ -1816,7 +1823,7 @@ img {
 .hero-video {
   position: relative;
   width: 100%;
-  height: 100vh;       /* full viewport height */
+  height: 80vh;       /* full viewport height */
   overflow: hidden;
 }
 
@@ -2209,6 +2216,7 @@ img {
 .hero-slider {
   width: 100%;
   height: 700px;
+  max-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7334,3 +7342,123 @@ img {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* ---------- Center navbar content while keeping full-width background ---------- */
+
+/* 1) Constrain and center the inner content block */
+.site-header nav.navigation > .container-fluid {
+  max-width: 1400px;        /* how wide the content area can get - tweak if needed */
+  margin: 0 auto;           /* center it horizontally */
+  padding-left: 80px;       /* inner breathing room */
+  padding-right: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, nav center (flex trick), contact right */
+  gap: 20px;
+}
+
+/* 2) Make the three logical blocks behave with predictable flex rules */
+.site-header .navbar-header {
+  flex: 0 0 auto;           /* keep logo block natural size */
+  display: flex;
+  align-items: center;
+}
+
+.site-header #navbar {
+  flex: 1 1 0;              /* allow nav to grow and shrink to fill center space */
+  display: flex;
+  justify-content: center;  /* center the nav items horizontally within this middle block */
+  align-items: center;
+}
+
+/* nav ul as inline-flex so items sit in a row and don't float to edges */
+.site-header #navbar .nav.navbar-nav {
+  float: none !important;
+  display: inline-flex !important;
+  gap: 18px;                /* spacing between menu items */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ensure right block stays compact */
+.site-header .search-contact {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 3) Defensive resets if any fixed widths were present */
+.site-header .navigation-holder,
+.site-header #navbar,
+.site-header #navbar .nav.navbar-nav,
+.site-header .search-contact {
+  width: auto !important;
+  max-width: none !important;
+}
+
+
+
+/* ---------- Responsive: stack nicely on small screens ---------- */
+@media (max-width: 991px) {
+  .site-header nav.navigation > .container-fluid {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-header .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-header #navbar {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 10px;
+  }
+
+  .site-header #navbar .nav.navbar-nav {
+    display: block !important;
+  }
+
+  .site-header .search-contact {
+    margin-top: 12px;
+  }
+}
+
+
+/* --- Fix logo vertical alignment --- */
+.site-header .navbar-header,
+.site-header .navbar-brand {
+  display: flex;
+  align-items: center;  /* centers logo vertically */
+  padding: 0;           /* remove extra top/bottom padding */
+  margin: 0;
+}
+
+/* ensure the logo image aligns cleanly with the nav height */
+.site-header .navbar-brand img {
+  height: 100px;         /* adjust depending on how tall you want it */
+  width: auto;
+  display: block;       /* removes weird inline spacing */
+  margin: 0;            /* ensures it's not pushed down */
+  vertical-align: middle;
+  filter: none !important;        /* remove any filter */
+  opacity: 1 !important;          /* ensure it’s fully visible */
+  mix-blend-mode: normal !important; /* avoids color blending with background */
+}
+
+/* small tweak: make sure the header itself isn’t adding extra height */
+.site-header .navigation.navbar {
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 70px;     /* optional: controls overall bar height */
+  display: flex;
+}
