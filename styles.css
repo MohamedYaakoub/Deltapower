@@ -1,0 +1,247 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0F111A;
+  color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  background-color: #FAF9F6;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;   /* limits width so it looks centered on large screens */ 
+  margin: 0 auto;      /* centers it horizontally */
+  padding: 0px 40px;     /* pushes logo right & nav-links left */
+}
+
+
+.logo-image {
+  height: 50px; /* smaller height */
+  width: auto;  /* maintain aspect ratio */
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 22px;
+  color: #031d40;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.nav-links {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #031d40;
+  font-weight: 550;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #68BDFE;
+}
+
+/* Hero Image */
+.hero {
+  margin-top: 80px;
+  width: 100%;
+  height: 70vh;
+  background-image: url('media/hero-placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+}
+
+/* About Us Section */
+.about-us {
+  position: relative;      /* parent for overlay and video */
+  overflow: hidden;
+  padding: 350px 20px;
+  text-align: center;
+  background: #1E1E2F;    /* fallback color */
+  color: #DCE5F5;
+}
+
+/* Video behind everything */
+.about-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;             /* below content */
+  pointer-events: none;
+}
+
+/* Overlay layer */
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* semi-transparent dark overlay */
+  z-index: 1;             /* above video but below content */
+}
+
+/* Text container */
+.about-container {
+  position: relative;
+  z-index: 2;             /* top layer */
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Sharper text */
+.about-container h2,
+.about-container p {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.about-container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.about-container p {
+  font-size: 26px;
+  line-height: 1.8;
+  font-weight: 500;
+  color: #DCE5F5;
+}
+
+
+
+
+/* ===== Our Business Lines Section ===== */
+.business-lines {
+  background-color: #ffffff; /* dark background */
+  color: #0F111A; /* light text */
+  padding: 80px 20px;
+}
+
+.business-lines h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #0F111A; /* light blue accent */
+  margin-bottom: 60px;
+}
+
+.business-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* for responsiveness */
+  padding-top: 50px;
+}
+
+
+.business-text {
+  flex: 1 1 400px; /* text takes at least 400px, grows if space available */
+}
+
+.business-text h3 {
+  font-size: 28px;
+  color: #0F111A;
+  margin-bottom: 15px;
+}
+
+.business-text p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.business-lines .container {
+  max-width: 1500px;   /* same as navbar max-width */
+  margin: 0 auto;      /* centers container */
+  padding: 0 40px;     /* pushes content away from screen edges */
+}
+
+.business-img {
+  width: 1500px;       /* fill the parent flex width */
+  height: auto;      /* maintain aspect ratio */
+  max-width: 700px;  /* limit max width */
+  border-radius: 5px;
+}
+
+.business-image {
+  flex: 1 1 400px; /* image takes at least 400px, grows if space available */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* .business-item-flip {
+  flex-direction: row-reverse; /* flips text and image */
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .business-item {
+    flex-direction: column;
+  }
+
+  .business-image {
+    margin-top: 20px;
+  }
+}
