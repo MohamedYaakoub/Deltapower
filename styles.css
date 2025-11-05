@@ -5,10 +5,16 @@
   box-sizing: border-box;
 }
 
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   background-color: #0F111A;
-  color: white;
+  /* font-family: 'Space Grotesk', 'ui-sans-serif'; */
+  font-family: 'Poppins', sans-serif  ;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #DCE5F5;
 }
 
 /* Navigation Bar */
@@ -31,14 +37,14 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1500px;   /* limits width so it looks centered on large screens */ 
+  max-width: 1700px;   /* limits width so it looks centered on large screens */ 
   margin: 0 auto;      /* centers it horizontally */
   padding: 0px 40px;     /* pushes logo right & nav-links left */
 }
 
 
 .logo-image {
-  height: 50px; /* smaller height */
+  height: 75px; /* smaller height */
   width: auto;  /* maintain aspect ratio */
 }
 
@@ -46,15 +52,36 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 35px;
 }
 
-.company-name {
+/* .company-name {
   font-weight: bold;
   font-size: 22px;
   color: #031d40;
   letter-spacing: 0.5px;
+} */
+
+
+.company-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #031d40;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
 }
+
+.company-name .subtext {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #031d40; /* soft blue accent or pick a subtle grey */
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
 
 nav {
   flex-grow: 1;
@@ -65,6 +92,7 @@ nav {
   list-style: none;
   display: inline-flex;
   gap: 30px;
+
 }
 
 .nav-links a {
@@ -75,9 +103,60 @@ nav {
   transition: color 0.3s ease;
 }
 
+
+
 .nav-links a:hover {
-  color: #68BDFE;
+  color: #026773;
 }
+
+
+/* Language Switcher in Navbar */
+.language-switch {
+  margin-left: 100px;
+  display: inline-block;
+}
+
+.language-switch a {
+  color: #031d40;
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 20px;
+  margin: 0 4px;
+  transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+  color: #012e40;
+}
+
+.language-switch .active {
+  font-weight: bold;
+  color: #012e40;
+}
+
+
+.language-switch .divider {
+  color: #031d40; /* dark blue, same as text or adjust as you like */
+  margin: 0 6px;
+  font-weight: normal;
+  opacity: 1; /* optional, for a softer look */
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.language-switch:hover .divider {
+  color: #012e40; /* light blue on hover, optional */
+  opacity: 1;
+}
+
+
+/* Adjust spacing for smaller screens */
+@media (max-width: 768px) {
+  .language-switch {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
 
 /* Hero Image */
 .hero {
@@ -126,6 +205,18 @@ nav {
   pointer-events: none;
 }
 
+.about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;             /* Keep it behind the text */
+  pointer-events: none;   /* Makes sure it doesn’t interfere with clicks */
+  opacity: 0.5  5;          /* Optional: softens the image for text readability */
+}
+
 /* Overlay layer */
 .about-us::before {
   content: "";
@@ -142,28 +233,28 @@ nav {
 .about-container {
   position: relative;
   z-index: 2;             /* top layer */
-  max-width: 1500px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
 /* Sharper text */
-.about-container h2,
+/* .about-container h2,
 .about-container p {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-}
+} */
 
 .about-container h2 {
-  font-size: 40px;
+  font-size: 55px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
 .about-container p {
-  font-size: 26px;
+  font-size: 30px;
+  font-weight: 300; 
   line-height: 1.8;
-  font-weight: 500;
-  color: #DCE5F5;
+  color: #ffffff;
 }
 
 
@@ -177,8 +268,9 @@ nav {
 }
 
 .business-lines h2 {
-  text-align: center;
-  font-size: 40px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 42px;
   font-weight: bold;
   color: #0F111A; /* light blue accent */
   margin-bottom: 60px;
@@ -191,27 +283,57 @@ nav {
   gap: 40px;
   margin-bottom: 60px;
   flex-wrap: wrap; /* for responsiveness */
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 
 .business-text {
   flex: 1 1 400px; /* text takes at least 400px, grows if space available */
-}
-
-.business-text h3 {
-  font-size: 28px;
-  color: #0F111A;
-  margin-bottom: 15px;
+  font-weight: 300;       /* Light weight for elegance */
+  line-height: 1.5;       /* Makes text airy and readable */
+  letter-spacing: 0.5px;  /* Subtle spacing for elegance */
+  /* color: #000000;         Assuming a dark background   */
 }
 
 .business-text p {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.7;
 }
 
+
+/* Minimal Underline Button */
+.btn-explore {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;  /* same font */
+  font-weight: 300;                     /* light and elegant */
+  font-size: 21px;
+  color: #0F111A;                       /* adjust for your background */
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;                  /* space for underline */
+  transition: all 0.3s ease;
+}
+
+/* Underline effect on hover */
+.btn-explore::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;           /* thickness of underline */
+  bottom: 0;
+  left: 0;
+  background-color: #0F111A;  /* same color as text */
+  transition: width 0.3s ease;
+}
+
+.btn-explore:hover::after {
+  width: 100%;           /* full underline appears on hover */
+}
+
+
 .business-lines .container {
-  max-width: 1500px;   /* same as navbar max-width */
+  max-width: 1700px;   /* same as navbar max-width */
   margin: 0 auto;      /* centers container */
   padding: 0 40px;     /* pushes content away from screen edges */
 }
@@ -219,7 +341,7 @@ nav {
 .business-img {
   width: 1500px;       /* fill the parent flex width */
   height: auto;      /* maintain aspect ratio */
-  max-width: 700px;  /* limit max width */
+  max-width: 900px;  /* limit max width */
   border-radius: 5px;
 }
 
@@ -231,10 +353,6 @@ nav {
 }
 
 
-/* .business-item-flip {
-  flex-direction: row-reverse; /* flips text and image */
-} */
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .business-item {
@@ -244,4 +362,248 @@ nav {
   .business-image {
     margin-top: 20px;
   }
+}
+
+
+
+
+
+
+
+/* SERVICES SECTION */
+.services {
+  background: #f8f9fc; /* light neutral background */
+  padding: 120px 20px;
+  text-align: left;
+}
+
+.services-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.services h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E1E2F;
+  /* margin-bottom: 60px; */
+  letter-spacing: 1px;
+}
+
+.services-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #1E1E2F;  /* or your text color */
+  /* margin-top: 8px; */
+  margin-bottom: 60px;
+}
+
+
+
+/* Grid for service cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* Each card */
+.service-item {
+  position: relative;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #111;
+}
+
+.service-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+/* Overlay title */
+.service-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 24px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Hover Effects */
+.service-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .service-item { height: 450px; }
+  .service-title { font-size: 24px; }
+}
+
+@media (max-width: 768px) {
+  .service-item { height: 350px; }
+  .service-title { font-size: 20px; padding: 20px; }
+}
+
+
+
+:root{
+  --bg:#0b0f1a;
+  --panel:#11141a;
+  --accent:#68BDFE;
+  --muted:#C7D7EE;
+}
+
+/* Section base */
+.key-figures{
+  background: linear-gradient(180deg, rgba(11,15,26,1) 0%, rgba(16,20,30,1) 100%);
+  color: var(--muted);
+  padding: 64px 20px;
+  /* font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; */
+}
+
+/* inner constrained container */
+.kf-inner{
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Title top-left (elegant) */
+.kf-title{
+  color: #fff;
+  padding: 25px;
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 28px 0;
+  text-align: left;
+  letter-spacing: 0.6px;
+  position: relative;
+}
+
+/* accent underline */
+.kf-title::after{
+  content: "";
+  display:block;
+  width:56px;
+  height:4px;
+  /* background: linear-gradient(90deg,var(--accent), #3B82F6); */
+  border-radius:2px;
+  margin-top:12px;
+  opacity:0.95;
+}
+
+/* row of 3 cards */
+.kf-row{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 220px;
+  align-items: stretch;
+}
+
+/* individual stat card */
+.kf-card{
+  /* background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); */
+  /* border: 1px solid rgba(255,255,255,0.03); */
+  padding: 0px 23px;
+  /* border-radius: 12px; */
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:250px;
+  /* box-shadow: 0 8px 24px rgba(2,8,23,0.6); */
+  transition: transform .32s cubic-bezier(.2,.9,.3,1), box-shadow .32s;
+  overflow: hidden;
+}
+
+/* .kf-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(4,12,32,0.65);
+} */
+
+/* number */
+.kf-number{
+  font-size: 46px;
+  font-weight: 700;
+  color: #fff;
+  line-height:1;
+  margin-bottom:6px;
+  letter-spacing: -0.5px;
+}
+
+/* label */
+.kf-label{
+  color: var(--muted);
+  font-size: 24px;
+  font-weight: 500;
+  margin-top:6px;
+}
+
+/* Responsive */
+/* @media (max-width: 980px){
+  .kf-row{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .kf-number { font-size:42px; }
+}
+
+@media (max-width:600px){
+  .kf-row{
+    grid-template-columns: 1fr;
+  }
+  .kf-title { font-size: 24px; margin-bottom:18px; }
+  .kf-number { font-size:36px; }
+  .kf-card { padding:20px; min-height:140px; }
+} */
+
+
+/* CSS */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.scroll-down svg.arrow-svg {
+  transition: all 0.3s ease;
+}
+
+.scroll-down svg.arrow-svg:hover circle {
+  stroke-opacity: 0.6; /* Slightly transparent circle on hover */
+}
+
+.scroll-down svg.arrow-svg:hover path {
+  stroke-opacity: 0.6; /* Slightly transparent arrow on hover */
+}
+
+
+#business-lines {
+  scroll-margin-top: 95px; /* adjusts scroll position */
+}
+
+html {
+  scroll-behavior: smooth;
 }

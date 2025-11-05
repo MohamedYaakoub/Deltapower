@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage | SDCP</title>
+
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,17 +16,26 @@
   <div class="navbar-inner">
     <div class="logo-container">
       <img src="media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">Saudi Delta Company for Power Projects</div>
+      <div class="company-name">
+          Saudi Delta Company <br>
+         <span class="subtext">for Power Projects</span>
+      </div>
     </div>
 
     <nav>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
         <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+
+      <div class="language-switch">
+       <a href="#" class="active">English</a>
+       <span class="divider">|</span> 
+        <a href="#">العربية</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -32,66 +44,125 @@
 <!-- ===== About Us Section ===== -->
 <section class="about-us">
   <!-- Video Background -->
-  <video autoplay muted loop playsinline class="about-video">
+  <!-- <video autoplay muted loop playsinline class="about-video"> -->
+    <img src="media/images/front1.jpg" alt="About Us Background" class="about-image">
     <source src="media/videos/front_test4.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    <!-- Your browser does not support the video tag. -->
   </video>
 
   <!-- Overlay Content -->
   <div class="about-container">
-    <h2>Who are we</h2>
+    <h2>Powering The Growth of Saudi Arabia</h2>
     <p>
       Saudi Delta Power has served the kingdom for over 20 years, operating in 7 regions and specializing in power projects, infrastructure, and more.
     </p>
   </div>
+
+  <div class="scroll-down">
+  <a href="#business-lines">
+     <svg class="arrow-svg" width="60" height="60" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Circle -->
+      <circle cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+      <!-- Chevron Arrow -->
+      <path d="M15 20L25 30L35 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
 </section>
 
 <!-- ===== Our Business Lines Section ===== -->
 
 
-<section class="business-lines">
+<section id="business-lines" class="business-lines">
   <div class="container">
-    <h2>Connecting Communities</h2>
-
     <!-- First subsection: Electrical Infrastructure -->
     <div class="business-item">
       <div class="business-text">
-        <h3>Electrical Infrastructure</h3>
+        <!-- <h2>Powering Communities Empowering Progress</h2> -->
+        <h2>Lighting Communities Empowering Life</h2>
         <p>
-          We design, build, and maintain reliable electrical networks that keep communities and industries powered.
-        From high-voltage transmission lines to local distribution systems, our projects deliver energy safely and efficiently, 
-        connecting people and businesses while supporting growth and development.
+          We design and maintain reliable electrical networks, 
+          from high-voltage transmission lines to local distribution systems, 
+          delivering energy safely and efficiently to support communities and businesses.
         </p>
+
+        <!-- Button -->
+        <a href="#projects" class="btn-explore">Explore Our Projects</a>
       </div>
       <div class="business-image">
         <img src="media/images/front1.jpg" alt="Logo" class="business-img">
       </div>
     </div>
 
-        <!-- Second subsection: Power Projects (flipped) -->
-    <div class="business-item business-item-flip">
-      <div class="business-image">
-        <img src="media/images/front2_edit.jpg" alt="Logo" class="business-img">
-      </div>
-      <div class="business-text">
-        <h3>Power Projects</h3>
-        <p>
-          We specialize in large-scale power projects, delivering sustainable and efficient energy solutions 
-          across multiple regions in Saudi Arabia.
-        </p>
-      </div>
-    </div>
 
   </div>
 </section>
 
 
 
+<section class="services">
+  <div class="services-container">
+    <h2>Our Services</h2>
+    <h3 class="services-subtitle">Delivering innovative solutions for every project</h3>
+    <div class="service-grid">
+      <div class="service-item">
+        <img src="media/images/overground1.jpg" alt="Overhead Electrical Infrastructure">
+        <div class="service-title">Overhead Electrical Infrastructure</div>
+      </div>
+      <div class="service-item">
+        <img src="media/images/underground2.jpeg" alt="Underground Electrical Infrastructure">
+        <div class="service-title">Underground Electrical Infrastructure</div>
+      </div>
+      <div class="service-item">
+        <img src="media/images/maintenance1.jpg" alt="Maintenance Services">
+        <div class="service-title">Maintenance Services</div>
+      </div>
+      <div class="service-item">
+        <img src="media/images/asphalt1.JPG" alt="Road and Asphalt Works">
+        <div class="service-title">Road and Asphalt Works</div>
+      </div>
+      <div class="service-item">
+        <img src="media/images/powertrans1.jpeg" alt="Power Transmission Projects">
+        <div class="service-title">Power Transmission Projects</div>
+      </div>
+      <div class="service-item">
+        <img src="media/images/future.jpg" alt="Pending Projects">
+        <div class="service-title">Future Developments</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+<!-- ===== Stats / Key Figures Section ===== -->
+<section id="key-figures" class="key-figures">
+  <div class="kf-inner">
+    <h2 class="kf-title">Our Impact</h2>
+
+    <div class="kf-row">
+      <div class="kf-card">
+        <!-- <div class="kf-icon">⏳</div> -->
+        <div class="kf-number" data-target="20">0</div>
+        <div class="kf-label">Years of Experience</div>
+      </div>
+
+      <div class="kf-card">
+        <!-- <div class="kf-icon">👷</div> -->
+        <div class="kf-number" data-target="450">0</div>
+        <div class="kf-label">Total Workforce</div>
+      </div>
+
+      <div class="kf-card">
+        <!-- <div class="kf-icon">📁</div> -->
+        <div class="kf-number" data-target="320">0</div>
+        <div class="kf-label">Projects Submitted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="main.js"></script>
 </body>
-
-
-
-
 
 </html>
