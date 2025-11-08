@@ -1,0 +1,55 @@
+html[dir="rtl"] nav {
+  text-align: left;
+}
+
+html[dir="rtl"] .nav-links li {
+  margin-left: 0;
+  margin-right: 20px; /* spacing between items */
+}
+
+html[dir="rtl"] .language-switch {
+  margin-left: 0px;
+  margin-right: 100px;
+}
+
+
+html[dir="rtl"] .services {
+    text-align: right;
+}
+
+/* Base RTL override */
+html[dir="rtl"] .service-title {
+  text-align: right;
+}
+
+/* Tablet / smaller screens */
+@media (max-width: 1024px) {
+  html[dir="rtl"] .service-title {
+    text-align: right; /* re-apply for this screen size */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  html[dir="rtl"] .service-title {
+    text-align: right; /* re-apply for mobile */
+  }
+}
+
+html[dir="rtl"] .business-lines h2 {
+    text-align: right;  
+}
+
+
+html[dir="rtl"] .locations-list li::after {
+  left: auto;    /* disable left */
+  right: 0;      /* start from right */
+}
+
+
+html[dir="rtl"] .btn-explore::after {
+  left: auto;    /* disable left */
+  right: 0;      /* start from right */
+}
+
+
