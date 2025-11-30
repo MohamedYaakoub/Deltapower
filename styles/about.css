@@ -1,17 +1,14 @@
-/* ===========================
-   Divisions Section – Zig-Zag Layout
-=========================== */
 .divisions-section {
-  padding: 100px 20px;        /* padding left/right for small screens */
+  padding: 100px 0;
   background: #f8f9fc;
 }
 
 .divisions-section .container {
-  max-width: 1700px;          /* enforce max width */
+  max-width: 1700px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
-/* Section title and intro */
 .divisions-section .section-title {
   text-align: center;
   font-size: 36px;
@@ -22,39 +19,29 @@
 
 .divisions-section .section-intro {
   text-align: center;
-  max-width: 650px;
+  max-width: 800px;
   margin: 0 auto 60px;
-  font-size: 18px;
+  font-size: 24px;
   color: #555;
   line-height: 1.7;
 }
 
-/* ===========================
-   Division Row
-=========================== */
+/* Division Row */
 .division-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
   margin-bottom: 80px;
-  max-width: 1700px;           /* max-width for rows */
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Alternate row for zig-zag */
 .division-row:nth-child(even) {
-  direction: rtl; /* flip columns for even rows */
-}
-
-/* Text column */
-.division-text {
-  text-align: left;
+  direction: rtl;
 }
 
 .division-row:nth-child(even) .division-text {
-  text-align: right; /* align text to the right on even rows */
+  text-align: left;
 }
 
 .division-text h3 {
@@ -65,15 +52,16 @@
 }
 
 .division-text p {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   line-height: 1.8;
+  margin-bottom: 10px;
+  direction: ltr;
 }
 
-/* Image column */
 .division-image {
   width: 100%;
-  height: 250px;
+  height: 300px;
   border-radius: 12px;
   background-size: cover;
   background-position: center;
@@ -86,11 +74,12 @@
   .division-row {
     grid-template-columns: 1fr;
     gap: 40px;
-    direction: ltr; /* reset for mobile */
-    max-width: 100%; /* full width on smaller screens */
-    padding: 0 20px; /* small horizontal padding */
+    direction: ltr;
   }
   .division-row:nth-child(even) .division-text {
     text-align: left;
+  }
+  .division-image {
+    height: 250px;
   }
 }
