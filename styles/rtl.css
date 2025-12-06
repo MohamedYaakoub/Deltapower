@@ -53,3 +53,40 @@ html[dir="rtl"] .btn-explore::after {
 }
 
 
+
+/* Alternate row for zig-zag */
+html[dir="rtl"] .division-row:nth-child(even) {
+  direction: ltr;
+}
+
+html[dir="rtl"] .division-row:nth-child(even) .division-text {
+  text-align: right;
+}
+
+html[dir="rtl"] .division-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+
+
+@media (max-width: 1024px) {
+  
+  html[dir="rtl"] .division-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+  
+  html[dir="rtl"] .division-row:nth-child(even) .division-text {
+    text-align: left;
+  }
+  
+  html[dir="rtl"] .division-image {
+    height: 250px;
+  }
+}
+
+

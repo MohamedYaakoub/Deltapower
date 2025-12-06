@@ -1,0 +1,158 @@
+/* ===========================
+   Contact Page Styles
+=========================== */
+
+.contact-hero {
+  background-color: #1E1E2F;
+  color: #DCE5F5;
+  text-align: center;
+  padding: 120px 20px 120px;
+}
+
+.contact-hero .hero-title {
+  font-size: 55px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contact-hero .hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Contact Section
+=========================== */
+.contact-section {
+  padding: 100px 20px;
+  background: #f8f9fc;
+  color: #1a1a1a;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1700px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Contact Info */
+.contact-info h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #026773;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #026773;
+}
+
+.contact-form button.btn-explore {
+  width: fit-content;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #026773;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.btn-explore:hover {
+  background-color: #014f52;
+}
+
+/* Map */
+.contact-map {
+  padding: 0 20px 100px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1700px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-map iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 150px 20px 80px;
+  }
+
+  .contact-hero .hero-title {
+    font-size: 42px;
+  }
+
+  .contact-hero .hero-subtitle {
+    font-size: 20px;
+  }
+}
