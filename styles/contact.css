@@ -18,7 +18,7 @@
 .contact-hero .hero-subtitle {
   font-size: 24px;
   font-weight: 300;
-  max-width: 800px;
+  max-width: 550px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 0 auto;
   align-items: start;
 }

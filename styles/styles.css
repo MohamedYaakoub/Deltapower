@@ -104,7 +104,6 @@ nav {
 }
 
 
-
 .nav-links a:hover {
   color: #026773;
 }
@@ -365,6 +364,63 @@ nav {
 
 
 
+/* Slider container */
+.slider {
+  position: relative;
+  /* width: 100%; */
+  /* margin: auto; */
+  /* overflow: hidden; */
+
+  width: 900px;       /* fill the parent flex width */
+  height: 500px;      /* maintain aspect ratio */
+  max-width: 900px;  /* limit max width */
+  border-radius: 5px;
+}
+
+/* Slide images */
+.slide {
+  width: 900px;       /* fill the parent flex width */
+  height: 500px;      /* maintain aspect ratio */
+  display: none;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+  border-radius: 14px;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  backdrop-filter: blur(4px);
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Positioning */
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
 
 
 
