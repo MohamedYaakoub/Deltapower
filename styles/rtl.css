@@ -38,20 +38,6 @@ html[dir="rtl"] .service-title {
   text-align: right;
 }
 
-/* Tablet / smaller screens */
-@media (max-width: 1024px) {
-  html[dir="rtl"] .service-title {
-    text-align: right; /* re-apply for this screen size */
-  }
-}
-
-/* Mobile screens */
-@media (max-width: 768px) {
-  html[dir="rtl"] .service-title {
-    text-align: right; /* re-apply for mobile */
-  }
-}
-
 html[dir="rtl"] .business-lines h2 {
     text-align: right;  
 }
@@ -92,24 +78,6 @@ html[dir="rtl"] .division-text p {
 }
 
 
-@media (max-width: 1024px) {
-  
-  html[dir="rtl"] .division-row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    direction: ltr;
-  }
-  
-  html[dir="rtl"] .division-row:nth-child(even) .division-text {
-    text-align: left;
-  }
-  
-  html[dir="rtl"] .division-image {
-    height: 250px;
-  }
-}
-
-
 html[dir="rtl"] .who-eyebrow {
     font-size: 22px;
 }
@@ -137,4 +105,57 @@ html[dir="rtl"] .contact-info p {
 
 html[dir="rtl"] .contact-form label {
     font-size: 18px;
+}
+
+html[dir="rtl"] .service-row:nth-child(even) {
+  direction: ltr;
+}
+
+html[dir="rtl"] .service-row:nth-child(even) .service-text {
+  direction: rtl;
+  text-align: right;
+  padding-right: 60px;
+}
+
+html[dir="rtl"] .services-title {
+    font-size: 26px;
+}
+html[dir="rtl"] .services-description {
+    font-size: 24px;
+}
+
+html[dir="rtl"] .service-text p {
+    font-size: 24px;
+}
+
+
+@media (max-width: 1024px) {
+  
+  html[dir="rtl"] .division-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+  
+  html[dir="rtl"] .division-row:nth-child(even) .division-text {
+    text-align: left;
+  }
+  
+  html[dir="rtl"] .division-image {
+    height: 250px;
+  }
+}
+
+/* Tablet / smaller screens */
+@media (max-width: 1024px) {
+  html[dir="rtl"] .service-title {
+    text-align: right; /* re-apply for this screen size */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  html[dir="rtl"] .service-title {
+    text-align: right; /* re-apply for mobile */
+  }
 }
