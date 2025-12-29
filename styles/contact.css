@@ -53,15 +53,12 @@
   line-height: 1.7;
   margin-bottom: 10px;
 }
-
+/* 
 .contact-info a {
   color: #026773;
   text-decoration: none;
-}
+} */
 
-.contact-info a:hover {
-  text-decoration: underline;
-}
 
 /* Contact Form */
 .contact-form h2 {
@@ -95,7 +92,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #026773;
+  border-color: #1E1E2F;
 }
 
 .contact-form button.btn-explore {
@@ -103,7 +100,7 @@
   padding: 12px 30px;
   font-size: 18px;
   font-weight: 500;
-  background-color: #026773;
+  background-color: #1E1E2F;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -111,9 +108,45 @@
   transition: background-color 0.3s ease;
 }
 
-.contact-form button.btn-explore:hover {
-  background-color: #014f52;
+.btn-submit {
+  appearance: none;
+  -webkit-appearance: none;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  width: fit-content;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #1E1E2F;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+/* Hover */
+.btn-submit:hover {
+  background-color: #151527;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(30, 30, 47, 0.25);
+}
+
+/* Active (click) */
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(30, 30, 47, 0.2);
+}
+
+/* Focus (accessibility) */
+.btn-submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 30, 47, 0.3);
+}
+
 
 /* Map */
 .contact-map {

@@ -1,3 +1,19 @@
+html[dir="rtl"] .about-container p {
+  font-size: 32px;
+}
+
+html[dir="rtl"] .services-subtitle {
+    font-size: 24px;
+}
+
+html[dir="rtl"] .figure-label {
+    font-size: 24px;
+}
+
+html[dir="rtl"] .locations-list li {
+    font-size: 24px;
+}
+
 html[dir="rtl"] nav {
   text-align: left;
 }
@@ -52,6 +68,10 @@ html[dir="rtl"] .btn-explore::after {
   right: 0;      /* start from right */
 }
 
+html[dir="rtl"] .get-in-touch .btn-contact::after {
+  left: auto;    /* disable left */
+  right: 0;      /* start from right */
+}
 
 
 /* Alternate row for zig-zag */

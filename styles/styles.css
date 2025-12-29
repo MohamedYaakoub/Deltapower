@@ -9,7 +9,7 @@
 
 body {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  background-color: #0F111A;
+  background-color: #1E1E2F;
   /* font-family: 'Space Grotesk', 'ui-sans-serif'; */
   font-family: 'Poppins', sans-serif  ;
   font-weight: 300;
@@ -348,6 +348,72 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.get-in-touch {
+  background-color: #ffffff; /* changed from dark to light */
+  color: #1a1a1a; /* dark text for contrast */
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.get-in-touch .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.get-in-touch h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a; /* ensure title is dark */
+}
+
+.get-in-touch p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #555; /* slightly darker grey for readability */
+}
+
+/* Minimal Underline Button for Get in Touch */
+.get-in-touch .btn-contact {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;          /* slightly bolder for clarity */
+  font-size: 21px;
+  color: #0F111A;            /* dark text for light background */
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;       /* space for underline */
+  transition: all 0.3s ease;
+}
+
+/* Underline effect on hover */
+.get-in-touch .btn-contact::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;               /* thickness of underline */
+  bottom: 0;
+  left: 0;
+  background-color: #0F111A; /* same color as text */
+  transition: width 0.3s ease;
+}
+
+.get-in-touch .btn-contact:hover::after {
+  width: 100%;               /* full underline appears on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .get-in-touch h2 {
+    font-size: 32px;
+  }
+  .get-in-touch p {
+    font-size: 18px;
+  }
 }
 
 
@@ -717,7 +783,7 @@ html {
 }
 
 .footer {
-  background-color: #111; /* dark footer */
+  background-color: #1E1E2F;; /* dark footer */
   color: #f8f8f8;
   padding: 40px 20px;
   text-align: center;
