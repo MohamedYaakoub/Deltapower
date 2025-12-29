@@ -84,7 +84,7 @@ html[dir="rtl"] .division-row:nth-child(even) .division-text {
 }
 
 html[dir="rtl"] .division-text p {
-  font-size: 18px;
+  font-size: 22px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
@@ -110,3 +110,31 @@ html[dir="rtl"] .division-text p {
 }
 
 
+html[dir="rtl"] .who-eyebrow {
+    font-size: 22px;
+}
+
+html[dir="rtl"] .who-text p { 
+    font-size: 24px;
+}
+
+html[dir="rtl"] .divisions-section .section-intro {
+    font-size: 26px;
+}
+
+html[dir="rtl"] .get-in-touch p {
+    font-size: 22px;
+}
+
+html[dir="rtl"] .contact-hero .hero-subtitle {
+    font-size: 25px;
+    max-width: 480px;
+}
+
+html[dir="rtl"] .contact-info p {
+    font-size: 20px;
+}
+
+html[dir="rtl"] .contact-form label {
+    font-size: 18px;
+}
