@@ -1,0 +1,205 @@
+/*****************
+Who We Are Section
+*****************/
+
+@media (max-width: 1024px) {
+  .who-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .who-image {
+    height: 320px;
+  }
+
+  .who-text h2 {
+    font-size: 32px;
+  }
+}
+
+
+/************************
+Company Divisions Section
+************************/
+
+@media (max-width: 1024px) {
+  .division-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+  .division-row:nth-child(even) .division-text {
+    text-align: left;
+  }
+  .division-image {
+    height: 250px;
+  }
+}
+
+
+/**************
+Contact Section
+**************/
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-map iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 150px 20px 80px;
+  }
+
+  .contact-hero .hero-title {
+    font-size: 42px;
+  }
+
+  .contact-hero .hero-subtitle {
+    font-size: 20px;
+  }
+}
+
+
+/******
+General
+******/
+
+@media (max-width: 768px) {
+  .language-switch {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .get-in-touch h2 {
+    font-size: 32px;
+  }
+  .get-in-touch p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-item {
+    flex-direction: column;
+  }
+
+  .business-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-item { height: 450px; }
+  .service-title { font-size: 24px; }
+}
+
+@media (max-width: 768px) {
+  .service-item { height: 350px; }
+  .service-title { font-size: 20px; padding: 20px; }
+}
+
+@media (max-width: 1000px) {
+  .locations-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .locations-map iframe {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .locations-list li {
+    width: 100%; /* full width for small screens */
+    text-align: center;
+  }
+
+  .locations-list li::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/************
+Right to Left
+************/
+
+@media (max-width: 1024px) {
+  
+  html[dir="rtl"] .division-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+  
+  html[dir="rtl"] .division-row:nth-child(even) .division-text {
+    text-align: left;
+  }
+  
+  html[dir="rtl"] .division-image {
+    height: 250px;
+  }
+}
+/* Tablet / smaller screens */
+@media (max-width: 1024px) {
+  html[dir="rtl"] .service-title {
+    text-align: right; /* re-apply for this screen size */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  html[dir="rtl"] .service-title {
+    text-align: right; /* re-apply for mobile */
+  }
+}
+
+/* Services Section */
+@media (max-width: 1024px) {
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+
+  .service-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 34px;
+  }
+
+  .services-highlight {
+    font-size: 22px;
+  }
+
+  .services-description {
+    font-size: 16px;
+  }
+}

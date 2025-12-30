@@ -141,34 +141,3 @@
   color: #555;
   margin-bottom: 18px;
 }
-
-
-@media (max-width: 1024px) {
-  .who-container {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .who-image {
-    height: 320px;
-  }
-
-  .who-text h2 {
-    font-size: 32px;
-  }
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .division-row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    direction: ltr;
-  }
-  .division-row:nth-child(even) .division-text {
-    text-align: left;
-  }
-  .division-image {
-    height: 250px;
-  }
-}

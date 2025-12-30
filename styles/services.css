@@ -95,31 +95,3 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .service-row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    direction: ltr;
-  }
-
-  .service-image {
-    height: 250px;
-  }
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .services-title {
-    font-size: 34px;
-  }
-
-  .services-highlight {
-    font-size: 22px;
-  }
-
-  .services-description {
-    font-size: 16px;
-  }
-}

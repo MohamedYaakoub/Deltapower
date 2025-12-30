@@ -127,35 +127,3 @@ html[dir="rtl"] .services-description {
 html[dir="rtl"] .service-text p {
     font-size: 24px;
 }
-
-
-@media (max-width: 1024px) {
-  
-  html[dir="rtl"] .division-row {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    direction: ltr;
-  }
-  
-  html[dir="rtl"] .division-row:nth-child(even) .division-text {
-    text-align: left;
-  }
-  
-  html[dir="rtl"] .division-image {
-    height: 250px;
-  }
-}
-
-/* Tablet / smaller screens */
-@media (max-width: 1024px) {
-  html[dir="rtl"] .service-title {
-    text-align: right; /* re-apply for this screen size */
-  }
-}
-
-/* Mobile screens */
-@media (max-width: 768px) {
-  html[dir="rtl"] .service-title {
-    text-align: right; /* re-apply for mobile */
-  }
-}

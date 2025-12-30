@@ -148,13 +148,7 @@ nav {
 }
 
 
-/* Adjust spacing for smaller screens */
-@media (max-width: 768px) {
-  .language-switch {
-    margin-top: 10px;
-    margin-left: 0;
-  }
-}
+
 
 
 /* Hero Image */
@@ -167,20 +161,7 @@ nav {
   background-position: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 30px;
-  }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-start;
-  }
-}
 
 /* About Us Section */
 .about-us {
@@ -406,30 +387,6 @@ nav {
   width: 100%;               /* full underline appears on hover */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .get-in-touch h2 {
-    font-size: 32px;
-  }
-  .get-in-touch p {
-    font-size: 18px;
-  }
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .business-item {
-    flex-direction: column;
-  }
-
-  .business-image {
-    margin-top: 20px;
-  }
-}
-
-
-
 /* Slider container */
 .slider {
   position: relative;
@@ -573,18 +530,6 @@ nav {
   box-shadow: 0 12px 35px rgba(0,0,0,0.25);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .service-item { height: 450px; }
-  .service-title { font-size: 24px; }
-}
-
-@media (max-width: 768px) {
-  .service-item { height: 350px; }
-  .service-title { font-size: 20px; padding: 20px; }
-}
-
-
 
 /* :root{
   --bg:#0b0f1a;
@@ -726,31 +671,6 @@ nav {
   border: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-
-/* Responsive */
-@media (max-width: 1000px) {
-  .locations-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
-  .locations-map iframe {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .locations-list li {
-    width: 100%; /* full width for small screens */
-    text-align: center;
-  }
-
-  .locations-list li::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-
 
 .scroll-down {
   position: absolute;
