@@ -917,17 +917,14 @@ html[dir="rtl"] .figure-label {
 }
 
 /* ===== Page hero, image banner (about, services) =====
-   Fixed aspect ratio so every inner page banner has the same shape. */
+   Fixed height (not min-height) so every inner page banner is the same size. */
 .page-hero {
   position: relative;
   isolation: isolate;
   display: flex;
   align-items: flex-end;
-  aspect-ratio: 21 / 9;
-  min-height: 460px;
-  max-height: 760px;
-  width: 100%;
-  padding-block: 96px clamp(48px, 6vw, 88px);
+  height: clamp(460px, 72vh, 720px);
+  padding-block: 96px clamp(56px, 8vw, 104px);
   color: #fff;
   background: var(--ink);
   overflow: hidden;
@@ -969,6 +966,13 @@ html[dir="rtl"] .page-hero::before {
   max-width: 42rem;
   margin-top: 24px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 640px) {
+  .page-hero {
+    height: auto;
+    min-height: 460px;
+  }
 }
 
 /* ===== Call to action band ===== */
