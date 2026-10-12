@@ -928,7 +928,7 @@ html[dir="rtl"] .figure-label {
   max-height: 760px;
   width: 100%;
   /* Text starts at a fixed distance from the top, so every banner lines up */
-  padding-block: clamp(72px, 19vw, 300px) clamp(48px, 6vw, 88px);
+  padding-block: clamp(72px, 22vw, 340px) clamp(48px, 6vw, 88px);
   color: #fff;
   background: var(--ink);
   overflow: hidden;
