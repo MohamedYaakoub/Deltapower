@@ -1,20 +1,45 @@
-/* ===== Split hero: text panel + photo to the screen edge ===== */
+/* ===== Hero: photo as a faded background behind the text ===== */
 .contact-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
   height: clamp(460px, 72vh, 720px);
   background: var(--ink);
   color: var(--text-on-dark);
+  overflow: hidden;
+}
+
+/* The photo sits towards the far side so the text never covers the people */
+.contact-hero-media {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  z-index: -1;
+  width: 72%;
+}
+
+.contact-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* Fade into the navy on the text side, plus a subtle dark filter overall */
+.contact-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--ink) 0%, rgb(var(--shade) / 0.7) 30%, rgb(var(--shade) / 0.35) 65%, rgb(var(--shade) / 0.3) 100%);
+}
+
+html[dir="rtl"] .contact-hero-media::after {
+  background: linear-gradient(to left, var(--ink) 0%, rgb(var(--shade) / 0.7) 30%, rgb(var(--shade) / 0.35) 65%, rgb(var(--shade) / 0.3) 100%);
 }
 
 .contact-hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Line the text up with the page container (100% = this column, i.e. half the page) */
-  padding-block: 64px;
-  padding-inline-start: max(var(--gutter), calc(100% - var(--container) / 2 + var(--gutter)));
-  padding-inline-end: clamp(32px, 5vw, 80px);
+  max-width: 34rem;
 }
 
 .contact-hero-text h1 {
@@ -23,9 +48,8 @@
 }
 
 .contact-hero-text .lead {
-  max-width: 30rem;
   margin-top: 20px;
-  color: var(--text-on-dark-muted);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .quick-links {
@@ -55,32 +79,20 @@
   color: var(--accent-soft);
 }
 
-.contact-hero-media {
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-hero-media img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-}
-
 @media (max-width: 900px) {
   .contact-hero {
-    grid-template-columns: 1fr;
     height: auto;
-  }
-
-  .contact-hero-text {
-    padding: 64px var(--gutter);
+    min-height: 520px;
+    padding-block: 80px;
   }
 
   .contact-hero-media {
-    aspect-ratio: 4 / 3;
+    width: 100%;
+  }
+
+  .contact-hero-media::after,
+  html[dir="rtl"] .contact-hero-media::after {
+    background: rgb(var(--shade) / 0.72);
   }
 }
 
