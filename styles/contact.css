@@ -223,7 +223,7 @@ html[dir="rtl"] .field label {
 .field textarea:focus {
   background: var(--bg);
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(2, 103, 115, 0.1);
+  box-shadow: 0 0 0 4px rgba(43, 98, 163, 0.12);
 }
 
 .field input:focus + label,

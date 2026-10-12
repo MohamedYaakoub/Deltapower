@@ -10,8 +10,8 @@
   --ink: #0b1a2f;
   --shade: 8 20 38; /* RGB of the image overlays, used as rgb(var(--shade) / alpha) */
   --navy: #031d40;
-  --accent: #026773;
-  --accent-soft: #7cc4cc;
+  --accent: #2b62a3;      /* mid blue, same family as the navy */
+  --accent-soft: #93b8e3; /* light blue for use on navy backgrounds */
   --bg: #ffffff;
   --bg-soft: #f8f9fc;
   --bg-warm: #FAF9F6;
