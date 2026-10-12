@@ -923,8 +923,8 @@ html[dir="rtl"] .figure-label {
   isolation: isolate;
   display: flex;
   align-items: flex-end;
-  height: clamp(500px, 80vh, 800px);
-  padding-block: 96px clamp(56px, 8vw, 104px);
+  height: clamp(460px, 72vh, 720px);
+  padding-block: 96px clamp(80px, 10vw, 144px);
   color: #fff;
   background: var(--ink);
   overflow: hidden;
@@ -971,7 +971,7 @@ html[dir="rtl"] .page-hero::before {
 @media (max-width: 640px) {
   .page-hero {
     height: auto;
-    min-height: 500px;
+    min-height: 460px;
   }
 }
 
