@@ -253,3 +253,31 @@ html[dir="rtl"] .field label {
     width: 100%;
   }
 }
+
+/* ===== Form submission states ===== */
+.botcheck {
+  display: none;
+}
+
+.form-status {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.form-status.is-success {
+  background: rgba(43, 98, 163, 0.08);
+  color: var(--navy);
+}
+
+.form-status.is-error {
+  background: rgba(180, 35, 24, 0.08);
+  color: #8a1c13;
+}
+
+.contact-form button[disabled] {
+  opacity: 0.7;
+  cursor: wait;
+}

@@ -109,7 +109,13 @@
 
     <div class="form-card reveal">
       <h2>أرسل لنا رسالة</h2>
-      <form action="#" method="post">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST"
+            data-sending="جارٍ الإرسال…" data-success="شكرًا لك! تم إرسال رسالتك وسنتواصل معك قريبًا." data-error="حدث خطأ ما. يرجى المحاولة مرة أخرى أو مراسلتنا على info@deltapower.net.">
+        <!-- Web3Forms: messages are emailed to the inbox linked to this access key -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="from_name" value="Delta Power Website (Arabic)">
+        <!-- Spam trap: hidden from people, bots fill it in -->
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
         <div class="form-grid">
           <div class="field">
             <input type="text" id="name" name="name" placeholder=" " required>
@@ -129,6 +135,7 @@
           </div>
         </div>
         <button type="submit" class="btn btn--primary">إرسال <span class="arrow">←</span></button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
       </form>
     </div>
 

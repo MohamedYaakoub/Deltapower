@@ -70,3 +70,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Contact form: send to Web3Forms in the background and show the result in place.
+// Without JavaScript the form still posts normally to Web3Forms.
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  const button = form.querySelector('button[type="submit"]');
+  const status = form.querySelector(".form-status");
+  const buttonHTML = button.innerHTML;
+
+  const showStatus = (message, type) => {
+    status.textContent = message;
+    status.className = `form-status is-${type}`;
+    status.hidden = false;
+  };
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    button.disabled = true;
+    button.textContent = form.dataset.sending;
+    status.hidden = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) throw new Error(result.message);
+
+      form.reset();
+      showStatus(form.dataset.success, "success");
+    } catch (error) {
+      showStatus(form.dataset.error, "error");
+    } finally {
+      button.disabled = false;
+      button.innerHTML = buttonHTML;
+    }
+  });
+});
