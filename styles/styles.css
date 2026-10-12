@@ -190,11 +190,6 @@ html[dir="rtl"] .eyebrow {
   color: var(--text-muted);
 }
 
-.body-text {
-  line-height: 1.8;
-  color: var(--text-muted);
-}
-
 .section--dark .lead {
   color: var(--text-on-dark-muted);
 }
@@ -619,22 +614,17 @@ html[dir="rtl"] .hero-title {
 /* ===== Split layout: text + image (home intro, about) ===== */
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   align-items: center;
-  gap: clamp(40px, 6vw, 96px);
+  gap: clamp(40px, 7vw, 112px);
 }
 
 .split h2 {
-  font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+  font-size: var(--fs-h2);
   margin-bottom: 24px;
-  text-wrap: balance;
 }
 
-.split .body-text {
-  margin-top: 20px;
-}
-
-.split .link-arrow {
+.split .lead + .link-arrow {
   margin-top: 36px;
 }
 
