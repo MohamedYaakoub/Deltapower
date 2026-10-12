@@ -53,29 +53,37 @@ html[dir="rtl"] .contact-hero-media::after {
 }
 
 .quick-links {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 56px;
   margin-top: 40px;
   padding-top: 32px;
   border-top: 1px solid var(--line-on-dark);
 }
 
-.quick-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  width: fit-content;
+.quick-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+html[dir="rtl"] .quick-label {
+  font-size: 0.9375rem;
+  letter-spacing: 0;
+}
+
+.quick-link a {
   font-size: 1.125rem;
   font-weight: 400;
   color: #fff;
   transition: color 0.3s var(--ease);
 }
 
-.quick-links a:hover {
-  color: var(--accent-soft);
-}
-
-.quick-links svg {
+.quick-link a:hover {
   color: var(--accent-soft);
 }
 
@@ -115,21 +123,8 @@ html[dir="rtl"] .contact-hero-media::after {
 }
 
 .detail-list li {
-  display: flex;
-  gap: 20px;
   padding-block: 24px;
   border-bottom: 1px solid var(--line);
-}
-
-.info-icon {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(2, 103, 115, 0.08);
-  color: var(--accent);
 }
 
 .detail-label {
