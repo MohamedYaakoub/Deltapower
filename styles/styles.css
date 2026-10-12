@@ -922,12 +922,13 @@ html[dir="rtl"] .figure-label {
   position: relative;
   isolation: isolate;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   aspect-ratio: 21 / 9;
   min-height: 460px;
   max-height: 760px;
   width: 100%;
-  padding-block: 96px clamp(48px, 6vw, 88px);
+  /* Text starts at a fixed distance from the top, so every banner lines up */
+  padding-block: clamp(72px, 14vw, 260px) clamp(48px, 6vw, 88px);
   color: #fff;
   background: var(--ink);
   overflow: hidden;
