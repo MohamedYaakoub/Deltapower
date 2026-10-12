@@ -3,190 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage | SDCP</title>
+  <title>Saudi Delta Company for Power Projects</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        Saudi Delta Company <br>
-        <span class="subtext">for Power Projects</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">Saudi Delta Company <span class="brand-sub">for Power Projects</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="en/about.html">About</a></li>
         <li><a href="en/services.html">Services</a></li>
         <li><a href="en/contact.html">Contact</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="index.html" class="active">English</a>
-        <span class="divider">|</span>
-        <a href="ar/index.html">العربية</a>
+      <div class="lang-switch">
+        <a href="index.html" class="active" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="ar/index.html" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- About Us (Hero) Section -->
-<section class="about-us">
-  <img src="media/images/front1.jpg" alt="About Us Background" class="about-image">
+<main>
 
-  <div class="about-container">
-    <h2>Powering The Growth of Saudi Arabia</h2>
-    <p>
+<!-- Hero -->
+<section class="hero">
+  <img src="media/images/front1.jpg" alt="" class="hero-media">
+
+  <div class="container hero-content">
+    <span class="eyebrow eyebrow--light">Saudi Delta Company for Power Projects</span>
+    <h1 class="hero-title">Powering The Growth of Saudi Arabia</h1>
+    <p class="hero-text">
       Specialists in delivering power infrastructure projects,
       serving for over 15 years, operating across seven regions
     </p>
+    <div class="hero-actions">
+      <a href="en/services.html" class="btn btn--light">Explore Our Services <span class="arrow">→</span></a>
+      <a href="en/contact.html" class="btn btn--outline-light">Contact Us</a>
+    </div>
   </div>
 
-  <div class="scroll-down">
-    <a href="#business-lines">
-      <svg class="arrow-svg" width="60" height="60" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-        <path d="M15 20L25 30L35 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+  <a href="#business-lines" class="scroll-down" aria-label="Scroll down">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- Business Lines -->
+<section id="business-lines" class="section">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Lighting Communities Empowering Life</h2>
+      <p class="lead">
+        We design and maintain reliable electrical networks,
+        from high-voltage transmission lines to local distribution systems,
+        delivering energy safely and efficiently to support communities and businesses.
+      </p>
+      <a href="en/services.html" class="link-arrow">Explore Our Services <span class="arrow">→</span></a>
+    </div>
+    <figure class="media-frame reveal">
+      <img src="media/images/group_image.jpeg" alt="Saudi Delta team" loading="lazy">
+    </figure>
   </div>
 </section>
 
-<!-- Business Lines Section -->
-<section id="business-lines" class="business-lines">
+<!-- Services -->
+<section class="section section--soft">
   <div class="container">
-    <div class="business-item">
-      <div class="business-text">
-        <h2>Lighting Communities Empowering Life</h2>
-        <p>
-          We design and maintain reliable electrical networks,
-          from high-voltage transmission lines to local distribution systems,
-          delivering energy safely and efficiently to support communities and businesses.
-        </p>
-        <a href="#projects" class="btn-explore">Explore Our Projects</a>
-      </div>
-      <div class="business-image">
-        <img src="media/images/group_image.jpeg" alt="Saudi Delta team" class="business-img">
-      </div>
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Services</span>
+      <h2>Delivering innovative solutions for every project</h2>
+    </div>
+
+    <div class="card-grid">
+      <a href="en/services.html" class="service-card reveal">
+        <img src="media/images/services/powertrans1.jpeg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">01</span>
+          <h3>Distribution Networks</h3>
+          <span class="service-card-more">Learn more <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="en/services.html" class="service-card reveal">
+        <img src="media/images/services/overground1.jpg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">02</span>
+          <h3>Overhead Networks</h3>
+          <span class="service-card-more">Learn more <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="en/services.html" class="service-card reveal">
+        <img src="media/images/services/underground2.jpeg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">03</span>
+          <h3>Underground Networks</h3>
+          <span class="service-card-more">Learn more <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="en/services.html" class="service-card reveal">
+        <img src="media/images/services/maintenance1.jpg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">04</span>
+          <h3>Maintenance Services</h3>
+          <span class="service-card-more">Learn more <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="en/services.html" class="service-card reveal">
+        <img src="media/images/services/asphalt1.JPG" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">05</span>
+          <h3>Road and Asphalt Works</h3>
+          <span class="service-card-more">Learn more <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="en/services.html" class="service-card reveal">
+        <img src="media/images/services/future.jpg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">06</span>
+          <h3>Future Developments</h3>
+          <span class="service-card-more">Learn more <span class="arrow">→</span></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
-<section class="services">
-  <div class="services-container">
-    <h2>Our Services</h2>
-    <h3 class="services-subtitle">Delivering innovative solutions for every project</h3>
-
-    <div class="service-grid">
-      <a href="en/services.html" class="service-item">
-        <img src="media/images/services/powertrans1.jpeg" alt="Distribution Networks">
-        <div class="service-title">Distribution Networks</div>
-      </a>
-
-      <a href="en/services.html" class="service-item">
-        <img src="media/images/services/overground1.jpg" alt="Overhead Networks">
-        <div class="service-title">Overhead Networks</div>
-      </a>
-
-      <a href="en/services.html" class="service-item">
-        <img src="media/images/services/underground2.jpeg" alt="Underground Networks">
-        <div class="service-title">Underground Networks</div>
-      </a>
-
-      <a href="en/services.html" class="service-item">
-        <img src="media/images/services/maintenance1.jpg" alt="Maintenance Services">
-        <div class="service-title">Maintenance Services</div>
-      </a>
-
-      <a href="en/services.html" class="service-item">
-        <img src="media/images/services/asphalt1.JPG" alt="Road and Asphalt Works">
-        <div class="service-title">Road and Asphalt Works</div>
-      </a>
-
-      <a href="en/services.html" class="service-item">
-        <img src="media/images/services/future.jpg" alt="Future Developments">
-        <div class="service-title">Future Developments</div>
-      </a>
+<!-- Key Figures -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--light">By the Numbers</span>
+      <h2>Our impact at a glance</h2>
     </div>
-  </div>
-</section>
 
-<!-- Key Figures Section -->
-<section id="key-figures" class="key-figures">
-  <div class="key-figures-container">
-    <h2 class="figures-title">Our impact at a glance</h2>
-    <div class="figures-grid">
-      <div class="figure-item">
-        <div class="figure-number" data-target="15">0</div>
+    <div class="figures-grid reveal">
+      <div class="figure">
+        <div class="figure-number"><span data-target="15">0</span><span class="plus">+</span></div>
         <div class="figure-label">Years of Experience</div>
       </div>
-      <div class="divider"></div>
-      <div class="figure-item">
-        <div class="figure-number" data-target="1200">0</div>
+      <div class="figure">
+        <div class="figure-number"><span data-target="1200">0</span><span class="plus">+</span></div>
         <div class="figure-label">Total Workforce</div>
       </div>
-      <div class="divider"></div>
-      <div class="figure-item">
-        <div class="figure-number" data-target="250">0</div>
+      <div class="figure">
+        <div class="figure-number"><span data-target="250">0</span><span class="plus">+</span></div>
         <div class="figure-label">Projects Delivered</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Locations Section -->
-<section id="locations" class="locations">
-  <div class="locations-container">
-    <div class="locations-text">
-      <p class="locations-intro">
-        Delivering Excellence in 5 Regions across the Kingdom
-      </p>
+<!-- Locations -->
+<section class="section">
+  <div class="container locations-grid">
+    <div class="reveal">
+      <span class="eyebrow">Where We Work</span>
+      <h2>Delivering Excellence in 5 Regions across the Kingdom</h2>
 
-      <ul class="locations-list">
-        <li data-map="https://www.google.com/maps?q=Riyadh,+Saudi+Arabia&output=embed">Riyadh Region</li>
-        <li data-map="https://www.google.com/maps?q=Mecca,+Saudi+Arabia&output=embed">Makkah Region</li>
-        <li data-map="https://www.google.com/maps?q=Abha,+Saudi+Arabia&output=embed">Aseer Region</li>
-        <li data-map="https://www.google.com/maps?q=Tabuk,+Saudi+Arabia&output=embed">Tabuk Region</li>
-        <li data-map="https://www.google.com/maps?q=Al+Bahah,+Saudi+Arabia&output=embed">Al Bahah Region</li>
+      <ul class="region-list">
+        <li><button type="button" class="region is-active" aria-pressed="true" data-map="https://www.google.com/maps?q=Riyadh,+Saudi+Arabia&output=embed"><span class="region-num">01</span>Riyadh Region</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=Mecca,+Saudi+Arabia&output=embed"><span class="region-num">02</span>Makkah Region</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=Abha,+Saudi+Arabia&output=embed"><span class="region-num">03</span>Aseer Region</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=Tabuk,+Saudi+Arabia&output=embed"><span class="region-num">04</span>Tabuk Region</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=Al+Bahah,+Saudi+Arabia&output=embed"><span class="region-num">05</span>Al Bahah Region</button></li>
       </ul>
     </div>
 
-    <div class="locations-map">
-      <iframe id="map-frame"
+    <div class="map-frame reveal">
+      <iframe id="map-frame" title="Map of selected region"
         src="https://www.google.com/maps?q=Riyadh,+Saudi+Arabia&output=embed"
         allowfullscreen loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
-<!-- Get in Touch Section -->
-<section class="get-in-touch">
-  <div class="container">
-    <div class="get-text">
+<!-- Call to action -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
       <h2>Get in Touch</h2>
       <p>
         Have a project in mind or need more information?
         Our team at Saudi Delta Company is ready to provide solutions and guidance for your power infrastructure needs.
       </p>
-      <a href="en/contact.html" class="btn-contact">Contact Us</a>
     </div>
+    <a href="en/contact.html" class="btn btn--light">Contact Us <span class="arrow">→</span></a>
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 Saudi Delta Company for Power Projects Ltd.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="media/logo/single_color_logo.svg" alt="Saudi Delta Company">
+      <p>Specialists in delivering power infrastructure projects across the Kingdom of Saudi Arabia.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="en/about.html">About</a></li>
+        <li><a href="en/services.html">Services</a></li>
+        <li><a href="en/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <address>
+        <span>Twin Tower, North Building, 3rd Floor<br>Al Olaya, Riyadh 11351</span>
+        <a href="tel:+966114622849">+966 11 462 2849</a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 Saudi Delta Company for Power Projects. All rights reserved.</p>
   </div>
 </footer>
 

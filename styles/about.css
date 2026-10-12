@@ -1,131 +1,49 @@
-/* ===== Who We Are Section ===== */
-.who-we-are {
-  padding: 100px 0;
-  background: #ffffff;
-}
-
-.who-container {
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 0 40px;
+/* ===== Who We Are: image bleeds to the screen edge ===== */
+.who {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   align-items: center;
+  background: var(--bg);
 }
 
-.who-image {
-  height: 480px;
-  background-size: cover;
-  background-position: center 30%;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+.who-media {
   position: relative;
-  overflow: hidden;
+  min-height: clamp(420px, 62vh, 640px);
+  height: 100%;
 }
 
-/* Soft overlay */
-.who-image::before {
-  content: "";
+.who-media img {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.05));
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 .who-text {
-  max-width: 600px;
+  max-width: calc(var(--container) / 2);
+  padding: clamp(56px, 8vw, 120px) var(--gutter);
+  padding-inline-start: clamp(40px, 7vw, 112px);
 }
 
-.who-eyebrow {
-  display: inline-block;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #1a1a1a;
-  margin-bottom: 15px;
+.who-text h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: 28px;
 }
 
-.who-text h2 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: #1a1a1a;
-  margin-bottom: 25px;
-}
+@media (max-width: 900px) {
+  .who {
+    grid-template-columns: 1fr;
+  }
 
-.who-text p {
-  font-size: 22px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 18px;
-}
+  .who-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
 
-/* ===== Company Divisions Section ===== */
-.divisions-section {
-  padding-top: 100px;
-  overflow: hidden;
-  background: #f8f9fc;
-}
-
-.divisions-section .container {
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.divisions-section .section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #1a1a1a;
-}
-
-.divisions-section .section-intro {
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto 120px;
-  font-size: 24px;
-  color: #555;
-  line-height: 1.7;
-}
-
-.division-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  margin-bottom: 150px;
-}
-
-/* Zig-zag: swap image and text on even rows */
-.division-row:nth-child(even) {
-  direction: rtl;
-}
-
-.division-row:nth-child(even) .division-text {
-  text-align: left;
-}
-
-.division-text h3 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #1a1a1a;
-}
-
-.division-text p {
-  font-size: 24px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 10px;
-  direction: ltr;
-}
-
-.division-image {
-  width: 100%;
-  height: 450px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  .who-text {
+    max-width: none;
+    padding-inline: var(--gutter);
+  }
 }

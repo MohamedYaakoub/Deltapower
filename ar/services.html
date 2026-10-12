@@ -3,82 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الخدمات | شركة دلتا السعودية</title>
+  <title>الخدمات – شركة دلتا السعودية</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="stylesheet" href="../styles/services.css">
-  <link rel="stylesheet" href="../styles/rtl.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="../media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        شركة دلتا السعودية <br>
-        <span class="subtext">لمشاريع الطاقة</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="../media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">شركة دلتا السعودية <span class="brand-sub">لمشاريع الطاقة</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
-        <li><a href="../ar/index.html">الرئيسية</a></li>
-        <li><a href="../ar/about.html">من نحن</a></li>
-        <li><a href="../ar/services.html" class="active">الخدمات</a></li>
-        <li><a href="../ar/contact.html">تواصل معنا</a></li>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html" aria-current="page">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="../en/services.html">English</a>
-        <span class="divider">|</span>
-        <a href="../ar/services.html" class="active">العربية</a>
+      <div class="lang-switch">
+        <a href="../en/services.html" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="services.html" class="active" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<section class="services-section">
-  <div class="container">
+<main>
 
-    <div class="services-header">
-      <p class="services-title">خدماتنا</p>
-      <p class="services-highlight">
-        نُسهم في دفع عجلة التقدم عبر جميع مراحل تطوير البنية التحتية
-      </p>
-      <p class="services-description">
-        تقدم شركة دلتا السعودية حلولًا كهربائية متكاملة وعالية التأثير،
-        تدعم النمو والاستدامة ومستقبل الطاقة في مختلف مناطق المملكة.
-      </p>
-    </div>
+<!-- Page header -->
+<section class="page-header">
+  <div class="container reveal">
+    <span class="eyebrow">خدماتنا</span>
+    <h1>نُسهم في دفع عجلة التقدم عبر جميع مراحل تطوير البنية التحتية</h1>
+    <p class="lead">
+      تقدم شركة دلتا السعودية حلولًا كهربائية متكاملة وعالية التأثير،
+      تدعم النمو والاستدامة ومستقبل الطاقة في مختلف مناطق المملكة.
+    </p>
+  </div>
+</section>
 
-    <div class="service-row">
-      <div class="service-text">
+<!-- Services -->
+<section class="section">
+  <div class="container feature-list">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">01</span>
         <h3>شبكات التوزيع</h3>
         <p>
           تنفيذ متكامل لشبكات التوزيع ذات الجهد المتوسط والمنخفض حتى ٣٤ كيلوفولت،
           بدءًا من التخطيط والتركيب وصولًا إلى الربط مع الشبكات القائمة.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/Networks_1.jpg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/Networks_1.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">02</span>
         <h3>الشبكات الهوائية</h3>
         <p>
           إنشاء وتطوير خطوط التوزيع الهوائية حتى ٣٤ كيلوفولت،
           بما يشمل الأعمدة والموصلات والمعدات المرتبطة بها.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/overground1.jpg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/overground1.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">03</span>
         <h3>الشبكات الأرضية</h3>
         <p>
           تنفيذ أنظمة الكابلات الأرضية للجهد المتوسط والمنخفض،
@@ -86,65 +96,101 @@
           سحب الكابلات، الوصلات والنهايات، الحماية والتأريض.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/underground2.jpeg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/underground2.jpeg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">04</span>
         <h3>خدمات الصيانة</h3>
         <p>
           خدمات صيانة وقائية وتصحيحية تهدف إلى إطالة عمر الأصول
           وتقليل الانقطاعات التشغيلية.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/maintenance2.jpg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/maintenance2.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">05</span>
         <h3>أعمال الطرق والأسفلت</h3>
         <p>
           تنفيذ أعمال الطرق والسفلتة المرتبطة بمشاريع البنية التحتية للطاقة،
           بما يضمن المتانة والسلامة والالتزام بالمعايير البلدية.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/asphalt1.JPG');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/asphalt1.JPG" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">06</span>
         <h3>التطوير المستقبلي</h3>
         <p>
           التوسع الاستراتيجي في حلول الطاقة المتقدمة
           وتقنيات البنية التحتية الحديثة بما يتماشى مع رؤية المملكة 2030.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/future.jpg');"></div>
-    </div>
-
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/future.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
   </div>
 </section>
 
-<!-- Get in Touch Section -->
-<section class="get-in-touch">
-  <div class="container">
-    <div class="get-text">
+<!-- Call to action -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
       <h2>لديك مشروع قادم؟</h2>
       <p>
         فريقنا على أتم الاستعداد لدعم مشاريعكم بخبرات موثوقة،
         وتقديم حلول عملية في جميع مراحل تطوير البنية التحتية للطاقة.
       </p>
-      <a href="../ar/contact.html" class="btn-contact">تواصل معنا</a>
     </div>
+    <a href="contact.html" class="btn btn--light">اتصل بنا <span class="arrow">←</span></a>
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 شركة دلتا السعودية لمشاريع الطاقة. جميع الحقوق محفوظة.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="../media/logo/single_color_logo.svg" alt="شركة دلتا السعودية">
+      <p>متخصصون في تنفيذ مشاريع البنية التحتية للطاقة في جميع أنحاء المملكة العربية السعودية.</p>
+    </div>
+    <div>
+      <h4>الصفحات</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>تواصل معنا</h4>
+      <address>
+        <span>برج توين، المبنى الشمالي، الطابق الثالث<br>العليا، الرياض 11351</span>
+        <a href="tel:+966114622849"><span dir="ltr">+966 11 462 2849</span></a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 شركة دلتا السعودية لمشاريع الطاقة. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 
+<script src="../js/main.js"></script>
 </body>
 </html>

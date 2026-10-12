@@ -3,175 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage | SDCP</title>
+  <title>شركة دلتا السعودية لمشاريع الطاقة</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="stylesheet" href="../styles/rtl.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="../media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        شركة دلتا السعودية <br>
-        <span class="subtext">لمشاريع الطاقة</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="../media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">شركة دلتا السعودية <span class="brand-sub">لمشاريع الطاقة</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
-        <li><a href="../ar/index.html">الرئيسية</a></li>
-        <li><a href="../ar/about.html">من نحن</a></li>
-        <li><a href="../ar/services.html">الخدمات</a></li>
-        <li><a href="../ar/contact.html">اتصل بنا</a></li>
+        <li><a href="index.html" aria-current="page">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="../index.html">English</a>
-        <span class="divider">|</span>
-        <a href="../ar/index.html" class="active">العربية</a>
+      <div class="lang-switch">
+        <a href="../index.html" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html" class="active" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- About Us (Hero) Section -->
-<section class="about-us">
-  <img src="../media/images/front1.jpg" alt="About Us Background" class="about-image">
+<main>
 
-  <div class="about-container">
-    <h2>نقود نمو المملكة العربية السعودية بالطاقة</h2>
-    <p>
+<!-- Hero -->
+<section class="hero">
+  <img src="../media/images/front1.jpg" alt="" class="hero-media">
+
+  <div class="container hero-content">
+    <span class="eyebrow eyebrow--light">شركة دلتا السعودية لمشاريع الطاقة</span>
+    <h1 class="hero-title">نقود نمو المملكة العربية السعودية بالطاقة</h1>
+    <p class="hero-text">
       متخصصون في تنفيذ مشاريع البنية التحتية للطاقة،
       نخدم المملكة منذ أكثر من 20 عامًا، ونعمل في سبع مناطق مختلفة
     </p>
+    <div class="hero-actions">
+      <a href="services.html" class="btn btn--light">استكشف خدماتنا <span class="arrow">←</span></a>
+      <a href="contact.html" class="btn btn--outline-light">اتصل بنا</a>
+    </div>
   </div>
 
-  <div class="scroll-down">
-    <a href="#business-lines">
-      <svg class="arrow-svg" width="60" height="60" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
-        <path d="M15 20L25 30L35 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+  <a href="#business-lines" class="scroll-down" aria-label="انتقل للأسفل">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- Business Lines -->
+<section id="business-lines" class="section">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">ماذا نقدم</span>
+      <h2>نمدّ الطاقة ونبني المستقبل</h2>
+      <p class="lead">
+        نصمم ونُنفذ شبكات كهربائية موثوقة، من خطوط النقل عالية الجهد إلى أنظمة التوزيع المحلية، لنقدم الطاقة بأمان وكفاءة لدعم المجتمعات والأعمال.
+      </p>
+      <a href="services.html" class="link-arrow">استكشف خدماتنا <span class="arrow">←</span></a>
+    </div>
+    <figure class="media-frame reveal">
+      <img src="../media/images/group_image.jpeg" alt="فريق شركة دلتا السعودية" loading="lazy">
+    </figure>
   </div>
 </section>
 
-<!-- Business Lines Section -->
-<section id="business-lines" class="business-lines">
+<!-- Services -->
+<section class="section section--soft">
   <div class="container">
-    <div class="business-item">
-      <div class="business-text">
-        <h2>نمدّ الطاق ونبني المستقبل</h2>
-        <p>
-          نصمم ونُنفذ شبكات كهربائية موثوقة، من خطوط النقل عالية الجهد إلى أنظمة التوزيع المحلية، لنقدم الطاقة بأمان وكفاءة لدعم المجتمعات والأعمال.
-        </p>
-        <a href="#projects" class="btn-explore">استكشف مشاريعنا</a>
-      </div>
-      <div class="business-image">
-        <img src="../media/images/group_image.jpeg" alt="فريق شركة دلتا السعودية" class="business-img">
-      </div>
+    <div class="section-head reveal">
+      <span class="eyebrow">خدماتنا</span>
+      <h2>نقدم حلولًا مبتكرة لكل مشروع</h2>
+    </div>
+
+    <div class="card-grid">
+      <a href="services.html" class="service-card reveal">
+        <img src="../media/images/services/powertrans1.jpeg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">01</span>
+          <h3>شبكات التوزيع</h3>
+          <span class="service-card-more">اعرف المزيد <span class="arrow">←</span></span>
+        </div>
+      </a>
+
+      <a href="services.html" class="service-card reveal">
+        <img src="../media/images/services/overground1.jpg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">02</span>
+          <h3>الشبكات الهوائية</h3>
+          <span class="service-card-more">اعرف المزيد <span class="arrow">←</span></span>
+        </div>
+      </a>
+
+      <a href="services.html" class="service-card reveal">
+        <img src="../media/images/services/underground2.jpeg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">03</span>
+          <h3>الشبكات الأرضية</h3>
+          <span class="service-card-more">اعرف المزيد <span class="arrow">←</span></span>
+        </div>
+      </a>
+
+      <a href="services.html" class="service-card reveal">
+        <img src="../media/images/services/maintenance1.jpg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">04</span>
+          <h3>خدمات الصيانة</h3>
+          <span class="service-card-more">اعرف المزيد <span class="arrow">←</span></span>
+        </div>
+      </a>
+
+      <a href="services.html" class="service-card reveal">
+        <img src="../media/images/services/asphalt1.JPG" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">05</span>
+          <h3>أعمال الطرق والأسفلت</h3>
+          <span class="service-card-more">اعرف المزيد <span class="arrow">←</span></span>
+        </div>
+      </a>
+
+      <a href="services.html" class="service-card reveal">
+        <img src="../media/images/services/future.jpg" alt="" loading="lazy">
+        <div class="service-card-body">
+          <span class="service-card-num">06</span>
+          <h3>التطويرات المستقبلية</h3>
+          <span class="service-card-more">اعرف المزيد <span class="arrow">←</span></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
-<section class="services">
-  <div class="services-container">
-    <h2>خدماتنا</h2>
-    <h3 class="services-subtitle">نقدم حلولًا مبتكرة لكل مشروع</h3>
-
-    <div class="service-grid">
-      <a href="../ar/services.html" class="service-item">
-        <img src="../media/images/services/powertrans1.jpeg" alt="شبكات التوزيع">
-        <div class="service-title">شبكات التوزيع</div>
-      </a>
-
-      <a href="../ar/services.html" class="service-item">
-        <img src="../media/images/services/overground1.jpg" alt="الشبكات الهوائية">
-        <div class="service-title">الشبكات الهوائية</div>
-      </a>
-
-      <a href="../ar/services.html" class="service-item">
-        <img src="../media/images/services/underground2.jpeg" alt="الشبكات الأرضية">
-        <div class="service-title">الشبكات الأرضية</div>
-      </a>
-
-      <a href="../ar/services.html" class="service-item">
-        <img src="../media/images/services/maintenance1.jpg" alt="خدمات الصيانة">
-        <div class="service-title">خدمات الصيانة</div>
-      </a>
-
-      <a href="../ar/services.html" class="service-item">
-        <img src="../media/images/services/asphalt1.JPG" alt="أعمال الطرق والأسفلت">
-        <div class="service-title">أعمال الطرق والأسفلت</div>
-      </a>
-
-      <a href="../ar/services.html" class="service-item">
-        <img src="../media/images/services/future.jpg" alt="التطويرات المستقبلية">
-        <div class="service-title">التطويرات المستقبلية</div>
-      </a>
+<!-- Key Figures -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--light">بالأرقام</span>
+      <h2>تأثيرنا في لمحة</h2>
     </div>
-  </div>
-</section>
 
-<!-- Key Figures Section -->
-<section id="key-figures" class="key-figures">
-  <div class="key-figures-container">
-    <h2 class="figures-title">تأثيرنا في لمحة</h2>
-    <div class="figures-grid">
-      <div class="figure-item">
-        <div class="figure-number" data-target="15">0</div>
+    <div class="figures-grid reveal">
+      <div class="figure">
+        <div class="figure-number"><span class="plus">+</span><span data-target="15">0</span></div>
         <div class="figure-label">سنوات الخبرة</div>
       </div>
-      <div class="divider"></div>
-      <div class="figure-item">
-        <div class="figure-number" data-target="1200">0</div>
+      <div class="figure">
+        <div class="figure-number"><span class="plus">+</span><span data-target="1200">0</span></div>
         <div class="figure-label">إجمالي القوى العاملة</div>
       </div>
-      <div class="divider"></div>
-      <div class="figure-item">
-        <div class="figure-number" data-target="250">0</div>
+      <div class="figure">
+        <div class="figure-number"><span class="plus">+</span><span data-target="250">0</span></div>
         <div class="figure-label">المشاريع المنفذة</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Locations Section -->
-<section id="locations" class="locations">
-  <div class="locations-container">
-    <div class="locations-text">
-      <p class="locations-intro">
-        نقدم خدماتنا في ٥ مناطق داخل المملكة
-      </p>
+<!-- Locations -->
+<section class="section">
+  <div class="container locations-grid">
+    <div class="reveal">
+      <span class="eyebrow">أين نعمل</span>
+      <h2>نقدم خدماتنا في ٥ مناطق داخل المملكة</h2>
 
-      <ul class="locations-list">
-        <li data-map="https://www.google.com/maps?q=الرياض,+السعودية&output=embed">منطقة الرياض</li>
-        <li data-map="https://www.google.com/maps?q=مكة+المكرمة,+السعودية&output=embed">منطقة مكة المكرمة</li>
-        <li data-map="https://www.google.com/maps?q=أبها,+السعودية&output=embed">منطقة عسير</li>
-        <li data-map="https://www.google.com/maps?q=تبوك,+السعودية&output=embed">منطقة تبوك</li>
-        <li data-map="https://www.google.com/maps?q=الباحة,+السعودية&output=embed">منطقة الباحة</li>
+      <ul class="region-list">
+        <li><button type="button" class="region is-active" aria-pressed="true" data-map="https://www.google.com/maps?q=الرياض,+السعودية&output=embed"><span class="region-num">01</span>منطقة الرياض</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=مكة+المكرمة,+السعودية&output=embed"><span class="region-num">02</span>منطقة مكة المكرمة</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=أبها,+السعودية&output=embed"><span class="region-num">03</span>منطقة عسير</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=تبوك,+السعودية&output=embed"><span class="region-num">04</span>منطقة تبوك</button></li>
+        <li><button type="button" class="region" aria-pressed="false" data-map="https://www.google.com/maps?q=الباحة,+السعودية&output=embed"><span class="region-num">05</span>منطقة الباحة</button></li>
       </ul>
     </div>
 
-    <div class="locations-map">
-      <iframe id="map-frame"
+    <div class="map-frame reveal">
+      <iframe id="map-frame" title="خريطة المنطقة المختارة"
         src="https://www.google.com/maps?q=الرياض,+السعودية&output=embed"
         allowfullscreen loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
+<!-- Call to action -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
+      <h2>تواصل معنا</h2>
+      <p>
+        هل لديك مشروع في ذهنك أو تحتاج إلى مزيد من المعلومات؟
+        فريقنا في شركة دلتا السعودية جاهز لتقديم الحلول والإرشادات لجميع احتياجاتك في البنية التحتية للطاقة.
+      </p>
+    </div>
+    <a href="contact.html" class="btn btn--light">اتصل بنا <span class="arrow">←</span></a>
+  </div>
+</section>
+
+</main>
+
 <!-- Footer -->
-<footer class="footer" dir="ltr">
-  <div class="footer-container">
-    <p>© 2025 Saudi Delta Company for Power Projects Ltd.</p>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="../media/logo/single_color_logo.svg" alt="شركة دلتا السعودية">
+      <p>متخصصون في تنفيذ مشاريع البنية التحتية للطاقة في جميع أنحاء المملكة العربية السعودية.</p>
+    </div>
+    <div>
+      <h4>الصفحات</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>تواصل معنا</h4>
+      <address>
+        <span>برج توين، المبنى الشمالي، الطابق الثالث<br>العليا، الرياض 11351</span>
+        <a href="tel:+966114622849"><span dir="ltr">+966 11 462 2849</span></a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 شركة دلتا السعودية لمشاريع الطاقة. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 

@@ -4,143 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us – Saudi Delta Company</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/about.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="../media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        Saudi Delta Company <br>
-        <span class="subtext">for Power Projects</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="../index.html" class="brand">
+      <img src="../media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">Saudi Delta Company <span class="brand-sub">for Power Projects</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../en/about.html">About</a></li>
-        <li><a href="../en/services.html">Services</a></li>
-        <li><a href="../en/contact.html">Contact</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="../en/about.html" class="active">English</a>
-        <span class="divider">|</span>
-        <a href="../ar/about.html">العربية</a>
+      <div class="lang-switch">
+        <a href="about.html" class="active" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="../ar/about.html" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- Who We Are Section -->
-<section class="who-we-are">
-  <div class="who-container">
-    <div class="who-image" style="background-image: url('../media/images/about/aerial_cr.jpg');"></div>
+<main>
 
-    <div class="who-text">
-      <span class="who-eyebrow">Who We Are</span>
-      <h2>Building Power Infrastructure<br>That Moves the Kingdom Forward</h2>
-      <p>
-        Saudi Delta Company for Power Projects is a leading contractor specializing
-        in electrical and civil power infrastructure across the Kingdom of Saudi Arabia.
-      </p>
-    </div>
+<!-- Who We Are -->
+<section class="who">
+  <div class="who-media">
+    <img src="../media/images/about/aerial_cr.jpg" alt="Aerial view of a Saudi Delta project site">
+  </div>
+  <div class="who-text reveal">
+    <span class="eyebrow">Who We Are</span>
+    <h1>Building Power Infrastructure That Moves the Kingdom Forward</h1>
+    <p class="lead">
+      Saudi Delta Company for Power Projects is a leading contractor specializing
+      in electrical and civil power infrastructure across the Kingdom of Saudi Arabia.
+    </p>
   </div>
 </section>
 
 <!-- Company Divisions -->
-<section class="divisions-section">
+<section class="section section--soft">
   <div class="container">
-    <h2 class="section-title">Our Company Divisions</h2>
-    <p class="section-intro">
-      With decades of expertise and specialized divisions, we deliver safe, reliable power
-      infrastructure solutions across the Kingdom, from planning to final commissioning.
-    </p>
-
-    <!-- Electrical Projects -->
-    <div class="division-row">
-      <div class="division-text">
-        <h3>Electrical Project Division</h3>
-        <p>
-          Our largest division delivers full-scope electrical infrastructure projects across the Kingdom through unified contracts,
-          turnkey execution, and ongoing maintenance services.
-        </p>
-      </div>
-      <!-- Photo by Ian Taylor on Unsplash -->
-      <div class="division-image" style="background-image: url('../media/images/about/EL.jpg');"></div>
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">Our Structure</span>
+      <h2>Our Company Divisions</h2>
+      <p class="lead">
+        With decades of expertise and specialized divisions, we deliver safe, reliable power
+        infrastructure solutions across the Kingdom, from planning to final commissioning.
+      </p>
     </div>
 
-    <!-- Civil Projects -->
-    <div class="division-row">
-      <div class="division-text">
-        <h3>Civil Projects Division</h3>
-        <p>
-          Saudi Delta Construction Division delivers comprehensive construction services
-          for complex projects across commercial, institutional, government, and
-          industrial sectors.
-        </p>
-      </div>
-      <!-- Photo by Glenov Brankovic on Unsplash -->
-      <div class="division-image" style="background-image: url('../media/images/about/CI.jpg');"></div>
-    </div>
+    <div class="feature-list">
+      <article class="feature-row">
+        <div class="feature-text reveal">
+          <span class="feature-num">01</span>
+          <h3>Electrical Project Division</h3>
+          <p>
+            Our largest division delivers full-scope electrical infrastructure projects across the Kingdom through unified contracts,
+            turnkey execution, and ongoing maintenance services.
+          </p>
+        </div>
+        <!-- Photo by Ian Taylor on Unsplash -->
+        <figure class="media-frame reveal">
+          <img src="../media/images/about/EL.jpg" alt="" loading="lazy">
+        </figure>
+      </article>
 
-    <!-- Procurement -->
-    <div class="division-row">
-      <div class="division-text">
-        <h3>Procurement Division</h3>
-        <p>
-          The Procurement Division manages sourcing, inventory, and surplus materials,
-          ensuring quality, cost efficiency, and timely delivery to support operations
-          locally and internationally.
-        </p>
-      </div>
-      <!-- Photo by Jacques Dillies on Unsplash -->
-      <div class="division-image" style="background-image: url('../media/images/about/PR.jpg');"></div>
-    </div>
+      <article class="feature-row">
+        <div class="feature-text reveal">
+          <span class="feature-num">02</span>
+          <h3>Civil Projects Division</h3>
+          <p>
+            Saudi Delta Construction Division delivers comprehensive construction services
+            for complex projects across commercial, institutional, government, and
+            industrial sectors.
+          </p>
+        </div>
+        <!-- Photo by Glenov Brankovic on Unsplash -->
+        <figure class="media-frame reveal">
+          <img src="../media/images/about/CI.jpg" alt="" loading="lazy">
+        </figure>
+      </article>
 
-    <!-- Technical Support -->
-    <div class="division-row">
-      <div class="division-text">
-        <h3>Technical Support Division</h3>
-        <p>
-          The Technical Support Division delivers specialized expertise through innovation,
-          research, and training, enhancing efficiency, reliability, and best practices
-          across construction and maintenance operations.
-        </p>
-      </div>
-      <div class="division-image" style="background-image: url('../media/images/about/SU.jpg');"></div>
+      <article class="feature-row">
+        <div class="feature-text reveal">
+          <span class="feature-num">03</span>
+          <h3>Procurement Division</h3>
+          <p>
+            The Procurement Division manages sourcing, inventory, and surplus materials,
+            ensuring quality, cost efficiency, and timely delivery to support operations
+            locally and internationally.
+          </p>
+        </div>
+        <!-- Photo by Jacques Dillies on Unsplash -->
+        <figure class="media-frame reveal">
+          <img src="../media/images/about/PR.jpg" alt="" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="feature-row">
+        <div class="feature-text reveal">
+          <span class="feature-num">04</span>
+          <h3>Technical Support Division</h3>
+          <p>
+            The Technical Support Division delivers specialized expertise through innovation,
+            research, and training, enhancing efficiency, reliability, and best practices
+            across construction and maintenance operations.
+          </p>
+        </div>
+        <figure class="media-frame reveal">
+          <img src="../media/images/about/SU.jpg" alt="" loading="lazy">
+        </figure>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Get in Touch Section -->
-<section class="get-in-touch">
-  <div class="container">
-    <div class="get-text">
+<!-- Call to action -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
       <h2>Get in Touch</h2>
       <p>
         Have a project in mind or need more information?
         Our team at Saudi Delta Company is ready to provide solutions and guidance for your power infrastructure needs.
       </p>
-      <a href="../en/contact.html" class="btn-contact">Contact Us</a>
     </div>
+    <a href="contact.html" class="btn btn--light">Contact Us <span class="arrow">→</span></a>
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 Saudi Delta Company for Power Projects. All rights reserved.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="../media/logo/single_color_logo.svg" alt="Saudi Delta Company">
+      <p>Specialists in delivering power infrastructure projects across the Kingdom of Saudi Arabia.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <address>
+        <span>Twin Tower, North Building, 3rd Floor<br>Al Olaya, Riyadh 11351</span>
+        <a href="tel:+966114622849">+966 11 462 2849</a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 Saudi Delta Company for Power Projects. All rights reserved.</p>
   </div>
 </footer>
 
+<script src="../js/main.js"></script>
 </body>
 </html>

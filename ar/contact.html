@@ -4,96 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>اتصل بنا – شركة دلتا السعودية</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/contact.css">
-  <link rel="stylesheet" href="../styles/rtl.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="../media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        شركة دلتا السعودية <br>
-        <span class="subtext">لمشاريع الطاقة</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="../media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">شركة دلتا السعودية <span class="brand-sub">لمشاريع الطاقة</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
-        <li><a href="../ar/index.html">الرئيسية</a></li>
-        <li><a href="../ar/about.html">من نحن</a></li>
-        <li><a href="../ar/services.html">الخدمات</a></li>
-        <li><a href="../ar/contact.html">اتصل بنا</a></li>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html" aria-current="page">اتصل بنا</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="../en/contact.html">English</a>
-        <span class="divider">|</span>
-        <a href="../ar/contact.html" class="active">العربية</a>
+      <div class="lang-switch">
+        <a href="../en/contact.html" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="contact.html" class="active" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="contact-hero">
-  <div class="container">
-    <h1 class="hero-title">تواصل معنا</h1>
-    <p class="hero-subtitle">
+<main>
+
+<!-- Page header -->
+<section class="page-header page-header--dark">
+  <div class="container reveal">
+    <span class="eyebrow eyebrow--light">اتصل بنا</span>
+    <h1>تواصل معنا</h1>
+    <p class="lead">
       هل لديك سؤال أو تحتاج لمزيد من المعلومات؟ فريقنا جاهز لمساعدتك.
     </p>
   </div>
 </section>
 
-<!-- Contact Info & Form -->
-<section class="contact-section">
+<!-- Contact info & form -->
+<section class="section section--soft">
   <div class="container contact-grid">
 
-    <div class="contact-info">
-      <h2>المكتب الرئيسي</h2>
-      <p>برج توين، المبنى الشمالي، الطابق الثالث</p>
-      <p>شارع وادي الوسطى، العليا</p>
-      <p>ص.ب 295664، الرياض 11351</p>
-      <p>المملكة العربية السعودية</p>
-      <p>البريد الإلكتروني: <a href="mailto:info@deltapower.net">info@deltapower.net</a></p>
-      <p>هاتف: <span dir="ltr">+966 11 462 2849</span></p>
-      <p>فاكس: <span dir="ltr">+966 11 462 2138</span></p>
+    <div class="info-list reveal">
+      <div class="info-card">
+        <span class="info-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        </span>
+        <div>
+          <h2>المكتب الرئيسي</h2>
+          <p>
+            برج توين، المبنى الشمالي، الطابق الثالث<br>
+            شارع وادي الوسطى، العليا<br>
+            ص.ب 295664، الرياض 11351<br>
+            المملكة العربية السعودية
+          </p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        </span>
+        <div>
+          <h2>الهاتف والفاكس</h2>
+          <p>
+            هاتف: <a href="tel:+966114622849"><span dir="ltr">+966 11 462 2849</span></a><br>
+            فاكس: <span dir="ltr">+966 11 462 2138</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        <div>
+          <h2>البريد الإلكتروني</h2>
+          <p><a href="mailto:info@deltapower.net">info@deltapower.net</a></p>
+        </div>
+      </div>
     </div>
 
-    <div class="contact-form">
+    <div class="form-card reveal">
       <h2>أرسل لنا رسالة</h2>
       <form action="#" method="post">
-        <label for="name">الاسم</label>
-        <input type="text" id="name" name="name" placeholder="اسمك" required>
-
-        <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required>
-
-        <label for="subject">الموضوع</label>
-        <input type="text" id="subject" name="subject" placeholder="الموضوع" required>
-
-        <label for="message">الرسالة</label>
-        <textarea id="message" name="message" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
-
-        <button type="submit" class="btn-submit">إرسال</button>
+        <div class="form-grid">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">الاسم</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">البريد الإلكتروني</label>
+          </div>
+          <div class="field field--full">
+            <input type="text" id="subject" name="subject" placeholder=" " required>
+            <label for="subject">الموضوع</label>
+          </div>
+          <div class="field field--full">
+            <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
+            <label for="message">الرسالة</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary">إرسال <span class="arrow">←</span></button>
       </form>
     </div>
 
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 شركة دلتا السعودية لمشاريع الطاقة. جميع الحقوق محفوظة.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="../media/logo/single_color_logo.svg" alt="شركة دلتا السعودية">
+      <p>متخصصون في تنفيذ مشاريع البنية التحتية للطاقة في جميع أنحاء المملكة العربية السعودية.</p>
+    </div>
+    <div>
+      <h4>الصفحات</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>تواصل معنا</h4>
+      <address>
+        <span>برج توين، المبنى الشمالي، الطابق الثالث<br>العليا، الرياض 11351</span>
+        <a href="tel:+966114622849"><span dir="ltr">+966 11 462 2849</span></a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 شركة دلتا السعودية لمشاريع الطاقة. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 
+<script src="../js/main.js"></script>
 </body>
 </html>

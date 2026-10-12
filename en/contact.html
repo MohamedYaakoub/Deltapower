@@ -4,95 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us – Saudi Delta Company</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/contact.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="../media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        Saudi Delta Company <br>
-        <span class="subtext">for Power Projects</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="../index.html" class="brand">
+      <img src="../media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">Saudi Delta Company <span class="brand-sub">for Power Projects</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../en/about.html">About</a></li>
-        <li><a href="../en/services.html">Services</a></li>
-        <li><a href="../en/contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="../en/contact.html" class="active">English</a>
-        <span class="divider">|</span>
-        <a href="../ar/contact.html">العربية</a>
+      <div class="lang-switch">
+        <a href="contact.html" class="active" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="../ar/contact.html" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="contact-hero">
-  <div class="container">
-    <h1 class="hero-title">Get in Touch</h1>
-    <p class="hero-subtitle">
+<main>
+
+<!-- Page header -->
+<section class="page-header page-header--dark">
+  <div class="container reveal">
+    <span class="eyebrow eyebrow--light">Contact</span>
+    <h1>Get in Touch</h1>
+    <p class="lead">
       Have a question or need more information? Our team is ready to assist you.
     </p>
   </div>
 </section>
 
-<!-- Contact Info & Form -->
-<section class="contact-section">
+<!-- Contact info & form -->
+<section class="section section--soft">
   <div class="container contact-grid">
 
-    <div class="contact-info">
-      <h2>Our Head Office</h2>
-      <p>Twin Tower, North Building, 3rd Floor</p>
-      <p>Wadi Al Awsat Street, Al Olaya</p>
-      <p>P.O. Box 295664, Riyadh 11351</p>
-      <p>Kingdom of Saudi Arabia</p>
-      <p>Email: <a href="mailto:info@deltapower.net">info@deltapower.net</a></p>
-      <p>Phone: +966 11 462 2849</p>
-      <p>Fax: +966 11 462 2138</p>
+    <div class="info-list reveal">
+      <div class="info-card">
+        <span class="info-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        </span>
+        <div>
+          <h2>Our Head Office</h2>
+          <p>
+            Twin Tower, North Building, 3rd Floor<br>
+            Wadi Al Awsat Street, Al Olaya<br>
+            P.O. Box 295664, Riyadh 11351<br>
+            Kingdom of Saudi Arabia
+          </p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        </span>
+        <div>
+          <h2>Phone &amp; Fax</h2>
+          <p>
+            Phone: <a href="tel:+966114622849">+966 11 462 2849</a><br>
+            Fax: +966 11 462 2138
+          </p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <span class="info-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        <div>
+          <h2>Email</h2>
+          <p><a href="mailto:info@deltapower.net">info@deltapower.net</a></p>
+        </div>
+      </div>
     </div>
 
-    <div class="contact-form">
+    <div class="form-card reveal">
       <h2>Send Us a Message</h2>
       <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-
-        <button type="submit" class="btn-submit">Send Message</button>
+        <div class="form-grid">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email</label>
+          </div>
+          <div class="field field--full">
+            <input type="text" id="subject" name="subject" placeholder=" " required>
+            <label for="subject">Subject</label>
+          </div>
+          <div class="field field--full">
+            <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
+            <label for="message">Message</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary">Send Message <span class="arrow">→</span></button>
       </form>
     </div>
 
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 Saudi Delta Company for Power Projects. All rights reserved.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="../media/logo/single_color_logo.svg" alt="Saudi Delta Company">
+      <p>Specialists in delivering power infrastructure projects across the Kingdom of Saudi Arabia.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <address>
+        <span>Twin Tower, North Building, 3rd Floor<br>Al Olaya, Riyadh 11351</span>
+        <a href="tel:+966114622849">+966 11 462 2849</a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 Saudi Delta Company for Power Projects. All rights reserved.</p>
   </div>
 </footer>
 
+<script src="../js/main.js"></script>
 </body>
 </html>

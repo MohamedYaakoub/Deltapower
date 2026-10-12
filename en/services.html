@@ -3,102 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | SDCP</title>
+  <title>Services – Saudi Delta Company</title>
+  <script>document.documentElement.classList.add("js");</script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="stylesheet" href="../styles/services.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Header -->
 <header class="navbar">
-  <div class="navbar-inner">
-    <div class="logo-container">
-      <img src="../media/logo/single_color_logo.svg" alt="Logo" class="logo-image">
-      <div class="company-name">
-        Saudi Delta Company <br>
-        <span class="subtext">for Power Projects</span>
-      </div>
-    </div>
+  <div class="container navbar-inner">
+    <a href="../index.html" class="brand">
+      <img src="../media/logo/single_color_logo.svg" alt="" class="brand-logo">
+      <span class="brand-name">Saudi Delta Company <span class="brand-sub">for Power Projects</span></span>
+    </a>
 
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../en/about.html">About</a></li>
-        <li><a href="../en/services.html" class="active">Services</a></li>
-        <li><a href="../en/contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <div class="language-switch">
-        <a href="../en/services.html" class="active">English</a>
-        <span class="divider">|</span>
-        <a href="../ar/services.html">العربية</a>
+      <div class="lang-switch">
+        <a href="services.html" class="active" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a href="../ar/services.html" lang="ar">عربي</a>
       </div>
     </nav>
   </div>
 </header>
 
-<section class="services-section">
-  <div class="container">
+<main>
 
-    <div class="services-header">
-      <p class="services-title">Our Services</p>
-      <p class="services-highlight">
-        Powering progress through every phase of infrastructure development
-      </p>
-      <p class="services-description">
-        Saudi Delta Company provides high-impact electrical solutions that support
-        growth, resilience, and the future of energy across the Kingdom.
-      </p>
-    </div>
+<!-- Page header -->
+<section class="page-header">
+  <div class="container reveal">
+    <span class="eyebrow">Our Services</span>
+    <h1>Powering progress through every phase of infrastructure development</h1>
+    <p class="lead">
+      Saudi Delta Company provides high-impact electrical solutions that support
+      growth, resilience, and the future of energy across the Kingdom.
+    </p>
+  </div>
+</section>
 
-    <div class="service-row">
-      <div class="service-text">
+<!-- Services -->
+<section class="section">
+  <div class="container feature-list">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">01</span>
         <h3>Distribution Networks</h3>
         <p>
           End-to-end delivery of reliable MV and LV distribution networks up to 34 kV,
           from planning and installation to integration with existing infrastructure.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/Networks_1.jpg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/Networks_1.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">02</span>
         <h3>Overhead Networks</h3>
         <p>
           Construction and upgrading of overhead distribution lines up to 34 kV, including poles, conductors, and associated equipment.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/overground1.jpg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/overground1.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">03</span>
         <h3>Underground Networks</h3>
         <p>
           Installation of MV/LV underground cable systems, including trenching/HDD,
           duct banks, cable pulling, joints &amp; terminations, protection, and earthing.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/underground2.jpeg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/underground2.jpeg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">04</span>
         <h3>Maintenance Services</h3>
         <p>
           Planned and corrective maintenance services aimed at extending asset life
           and minimizing operational disruptions.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/maintenance2.jpg');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/maintenance2.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">05</span>
         <h3>Road &amp; Asphalt Works</h3>
         <p>
           Execution of roadworks and asphalt paving associated with power
@@ -106,43 +123,73 @@
           with municipal standards.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/asphalt1.JPG');"></div>
-    </div>
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/asphalt1.JPG" alt="" loading="lazy">
+      </figure>
+    </article>
 
-    <div class="service-row">
-      <div class="service-text">
+    <article class="feature-row">
+      <div class="feature-text reveal">
+        <span class="feature-num">06</span>
         <h3>Future Developments</h3>
         <p>
           Strategic expansion into advanced power solutions and emerging
           infrastructure technologies aligned with Saudi Arabia’s Vision 2030.
         </p>
       </div>
-      <div class="service-image" style="background-image: url('../media/images/services/future.jpg');"></div>
-    </div>
-
+      <figure class="media-frame reveal">
+        <img src="../media/images/services/future.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
   </div>
 </section>
 
-<!-- Get in Touch Section -->
-<section class="get-in-touch">
-  <div class="container">
-    <div class="get-text">
+<!-- Call to action -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
       <h2>Have a project in mind?</h2>
       <p>
         Our team is ready to support your projects with trusted expertise,
         delivering practical solutions across every stage of power infrastructure development.
       </p>
-      <a href="../en/contact.html" class="btn-contact">Contact Us</a>
     </div>
+    <a href="contact.html" class="btn btn--light">Contact Us <span class="arrow">→</span></a>
   </div>
 </section>
 
+</main>
+
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-container">
-    <p>© 2025 Saudi Delta Company for Power Projects Ltd.</p>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="../media/logo/single_color_logo.svg" alt="Saudi Delta Company">
+      <p>Specialists in delivering power infrastructure projects across the Kingdom of Saudi Arabia.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <address>
+        <span>Twin Tower, North Building, 3rd Floor<br>Al Olaya, Riyadh 11351</span>
+        <a href="tel:+966114622849">+966 11 462 2849</a>
+        <a href="mailto:info@deltapower.net">info@deltapower.net</a>
+      </address>
+    </div>
+  </div>
+  <div class="container">
+    <p class="footer-bottom">© 2025 Saudi Delta Company for Power Projects. All rights reserved.</p>
   </div>
 </footer>
 
+<script src="../js/main.js"></script>
 </body>
 </html>
