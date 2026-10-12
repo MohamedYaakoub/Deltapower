@@ -1,7 +1,68 @@
+/* ===== Who We Are Section ===== */
+.who-we-are {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.who-container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.who-image {
+  height: 480px;
+  background-size: cover;
+  background-position: center 30%;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft overlay */
+.who-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.05));
+}
+
+.who-text {
+  max-width: 600px;
+}
+
+.who-eyebrow {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.who-text h2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.who-text p {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* ===== Company Divisions Section ===== */
 .divisions-section {
-  /* padding: 100px 0; */
   padding-top: 100px;
-  Overflow: hidden; /* contains floated/grid children */
+  overflow: hidden;
   background: #f8f9fc;
 }
 
@@ -28,7 +89,6 @@
   line-height: 1.7;
 }
 
-/* Division Row */
 .division-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -37,7 +97,7 @@
   margin-bottom: 150px;
 }
 
-/* Alternate row for zig-zag */
+/* Zig-zag: swap image and text on even rows */
 .division-row:nth-child(even) {
   direction: rtl;
 }
@@ -64,80 +124,8 @@
 .division-image {
   width: 100%;
   height: 450px;
-  /* border-radius: 12px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 12px 35px rgba(0,0,0,0.1);
-}
-
-/* =========================
-   Who We Are Section
-========================= */
-.who-image {
-  height: 480px;
-  background-size: cover;
-  background-position: center 30%; /* critical */
-  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Cinematic soft overlay */
-.who-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.05)
-  );
-}
-
-
-.who-we-are {
-  padding: 100px 0;
-  background: #ffffff;
-}
-
-.who-container {
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-
-/* Text */
-.who-text {
-  max-width: 600px;
-}
-
-.who-eyebrow {
-  display: inline-block;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  /* color: #888; */
-  color: #1a1a1a;
-  margin-bottom: 15px;
-}
-
-.who-text h2 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: #1a1a1a;
-  margin-bottom: 25px;
-}
-
-.who-text p {
-  font-size: 22px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 18px;
 }

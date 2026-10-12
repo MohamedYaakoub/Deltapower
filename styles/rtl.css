@@ -1,66 +1,62 @@
-html[dir="rtl"] .about-container p {
-  font-size: 32px;
-}
+/* Overrides for Arabic (right-to-left) pages */
 
-html[dir="rtl"] .services-subtitle {
-    font-size: 24px;
-}
-
-html[dir="rtl"] .figure-label {
-    font-size: 24px;
-}
-
-html[dir="rtl"] .locations-list li {
-    font-size: 24px;
-}
-
+/* ===== Navigation ===== */
 html[dir="rtl"] nav {
   text-align: left;
 }
 
 html[dir="rtl"] .nav-links li {
-  margin-left: 0;
-  margin-right: 20px; /* spacing between items */
+  margin-right: 20px;
 }
 
 html[dir="rtl"] .language-switch {
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 100px;
 }
 
-
-html[dir="rtl"] .services {
-    text-align: right;
+/* ===== Home Page ===== */
+html[dir="rtl"] .about-container p {
+  font-size: 32px;
 }
 
-/* Base RTL override */
+html[dir="rtl"] .business-lines h2,
+html[dir="rtl"] .services,
 html[dir="rtl"] .service-title {
   text-align: right;
 }
 
-html[dir="rtl"] .business-lines h2 {
-    text-align: right;  
+html[dir="rtl"] .services-subtitle,
+html[dir="rtl"] .figure-label,
+html[dir="rtl"] .locations-list li {
+  font-size: 24px;
 }
 
-
-html[dir="rtl"] .locations-list li::after {
-  left: auto;    /* disable left */
-  right: 0;      /* start from right */
-}
-
-
-html[dir="rtl"] .btn-explore::after {
-  left: auto;    /* disable left */
-  right: 0;      /* start from right */
-}
-
+/* Underline animations start from the right */
+html[dir="rtl"] .locations-list li::after,
+html[dir="rtl"] .btn-explore::after,
 html[dir="rtl"] .get-in-touch .btn-contact::after {
-  left: auto;    /* disable left */
-  right: 0;      /* start from right */
+  left: auto;
+  right: 0;
 }
 
+html[dir="rtl"] .get-in-touch p {
+  font-size: 22px;
+}
 
-/* Alternate row for zig-zag */
+/* ===== About Page ===== */
+html[dir="rtl"] .who-eyebrow {
+  font-size: 22px;
+}
+
+html[dir="rtl"] .who-text p {
+  font-size: 24px;
+}
+
+html[dir="rtl"] .divisions-section .section-intro {
+  font-size: 26px;
+}
+
+/* Zig-zag is mirrored in RTL */
 html[dir="rtl"] .division-row:nth-child(even) {
   direction: ltr;
 }
@@ -71,40 +67,17 @@ html[dir="rtl"] .division-row:nth-child(even) .division-text {
 
 html[dir="rtl"] .division-text p {
   font-size: 22px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 10px;
   direction: rtl;
 }
 
-
-html[dir="rtl"] .who-eyebrow {
-    font-size: 22px;
+/* ===== Services Page ===== */
+html[dir="rtl"] .services-title {
+  font-size: 26px;
 }
 
-html[dir="rtl"] .who-text p { 
-    font-size: 24px;
-}
-
-html[dir="rtl"] .divisions-section .section-intro {
-    font-size: 26px;
-}
-
-html[dir="rtl"] .get-in-touch p {
-    font-size: 22px;
-}
-
-html[dir="rtl"] .contact-hero .hero-subtitle {
-    font-size: 25px;
-    max-width: 480px;
-}
-
-html[dir="rtl"] .contact-info p {
-    font-size: 20px;
-}
-
-html[dir="rtl"] .contact-form label {
-    font-size: 18px;
+html[dir="rtl"] .services-description,
+html[dir="rtl"] .service-text p {
+  font-size: 24px;
 }
 
 html[dir="rtl"] .service-row:nth-child(even) {
@@ -117,13 +90,16 @@ html[dir="rtl"] .service-row:nth-child(even) .service-text {
   padding-right: 60px;
 }
 
-html[dir="rtl"] .services-title {
-    font-size: 26px;
-}
-html[dir="rtl"] .services-description {
-    font-size: 24px;
+/* ===== Contact Page ===== */
+html[dir="rtl"] .contact-hero .hero-subtitle {
+  font-size: 25px;
+  max-width: 480px;
 }
 
-html[dir="rtl"] .service-text p {
-    font-size: 24px;
+html[dir="rtl"] .contact-info p {
+  font-size: 20px;
+}
+
+html[dir="rtl"] .contact-form label {
+  font-size: 18px;
 }

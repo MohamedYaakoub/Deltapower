@@ -18,7 +18,6 @@
 
 .services-title {
   font-size: 24px;
-  /* font-weight: 400; */
   color: #000000;
   margin-bottom: 20px;
 }
@@ -33,26 +32,13 @@
   display: inline-block;
 }
 
-
 .services-description {
   font-size: 22px;
   color: #000000;
-  /* line-height: 1.8; */
   margin-top: 30px;
 }
 
-
-
-.services-section .section-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
-  font-size: 24px;
-  color: #555;
-  line-height: 1.7;
-}
-
-/* Service Row */
+/* ===== Service Rows ===== */
 .service-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -61,10 +47,9 @@
   margin-bottom: 80px;
 }
 
-/* Zig-zag alternation */
+/* Zig-zag: swap image and text on even rows */
 .service-row:nth-child(even) {
   direction: rtl;
-  
 }
 
 .service-row:nth-child(even) .service-text {
@@ -90,7 +75,6 @@
 .service-image {
   width: 100%;
   height: 550px;
-  /* border-radius: 12px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -5,25 +5,24 @@
   box-sizing: border-box;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   background-color: #1E1E2F;
-  /* font-family: 'Space Grotesk', 'ui-sans-serif'; */
-  font-family: 'Poppins', sans-serif  ;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   line-height: 1.7;
   color: #DCE5F5;
 }
 
-/* Navigation Bar */
+/* ===== Navigation Bar ===== */
 .navbar {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 0;
   background-color: #FAF9F6;
   position: sticky;
   top: 0;
@@ -37,17 +36,15 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1700px;   /* limits width so it looks centered on large screens */ 
-  margin: 0 auto;      /* centers it horizontally */
-  padding: 0px 40px;     /* pushes logo right & nav-links left */
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
-
 
 .logo-image {
-  height: 75px; /* smaller height */
-  width: auto;  /* maintain aspect ratio */
+  height: 75px;
+  width: auto;
 }
-
 
 .logo-container {
   display: flex;
@@ -55,16 +52,7 @@ body {
   gap: 35px;
 }
 
-/* .company-name {
-  font-weight: bold;
-  font-size: 22px;
-  color: #031d40;
-  letter-spacing: 0.5px;
-} */
-
-
 .company-name {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 26px;
   color: #031d40;
@@ -74,14 +62,12 @@ body {
 }
 
 .company-name .subtext {
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  color: #031d40; /* soft blue accent or pick a subtle grey */
+  color: #031d40;
   margin-top: 2px;
   letter-spacing: 0.5px;
 }
-
 
 nav {
   flex-grow: 1;
@@ -92,7 +78,6 @@ nav {
   list-style: none;
   display: inline-flex;
   gap: 30px;
-
 }
 
 .nav-links a {
@@ -103,13 +88,11 @@ nav {
   transition: color 0.3s ease;
 }
 
-
 .nav-links a:hover {
   color: #026773;
 }
 
-
-/* Language Switcher in Navbar */
+/* Language Switcher */
 .language-switch {
   margin-left: 100px;
   display: inline-block;
@@ -133,56 +116,25 @@ nav {
   color: #012e40;
 }
 
-
 .language-switch .divider {
-  color: #031d40; /* dark blue, same as text or adjust as you like */
+  color: #031d40;
   margin: 0 6px;
   font-weight: 500;
-  opacity: 1; /* optional, for a softer look */
-  transition: color 0.3s ease, opacity 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .language-switch:hover .divider {
-  color: #012e40; /* light blue on hover, optional */
-  opacity: 1;
+  color: #012e40;
 }
 
-
-
-
-
-/* Hero Image */
-.hero {
-  margin-top: 80px;
-  width: 100%;
-  height: 70vh;
-  background-image: url('media/hero-placeholder.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-
-
-/* About Us Section */
+/* ===== About Us (Hero) Section ===== */
 .about-us {
-  position: relative;      /* parent for overlay and video */
+  position: relative;
   overflow: hidden;
   padding: 350px 20px;
   text-align: center;
-  background: #1E1E2F;    /* fallback color */
+  background: #1E1E2F;
   color: #DCE5F5;
-}
-
-/* Video behind everything */
-.about-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;             /* below content */
-  pointer-events: none;
 }
 
 .about-image {
@@ -192,12 +144,11 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;             /* Keep it behind the text */
-  pointer-events: none;   /* Makes sure it doesn’t interfere with clicks */
-  opacity: 0.5  5;          /* Optional: softens the image for text readability */
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Overlay layer */
+/* Dark overlay above the image, below the text */
 .about-us::before {
   content: "";
   position: absolute;
@@ -205,23 +156,16 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4); /* semi-transparent dark overlay */
-  z-index: 1;             /* above video but below content */
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
 }
 
-/* Text container */
 .about-container {
   position: relative;
-  z-index: 2;             /* top layer */
+  z-index: 2;
   max-width: 1700px;
   margin: 0 auto;
 }
-
-/* Sharper text */
-/* .about-container h2,
-.about-container p {
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-} */
 
 .about-container h2 {
   font-size: 55px;
@@ -232,26 +176,51 @@ nav {
 
 .about-container p {
   font-size: 30px;
-  font-weight: 300; 
+  font-weight: 300;
   line-height: 1.8;
   color: #ffffff;
 }
 
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 100;
+}
 
+.scroll-down svg.arrow-svg {
+  transition: all 0.3s ease;
+}
 
+.scroll-down svg.arrow-svg:hover circle,
+.scroll-down svg.arrow-svg:hover path {
+  stroke-opacity: 0.6;
+}
 
-/* ===== Our Business Lines Section ===== */
+/* ===== Business Lines Section ===== */
+#business-lines {
+  scroll-margin-top: 95px;
+}
+
 .business-lines {
-  background-color: #ffffff; /* dark background */
-  color: #0F111A; /* light text */
+  background-color: #ffffff;
+  color: #0F111A;
   padding: 80px 20px;
+}
+
+.business-lines .container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .business-lines h2 {
   text-align: left;
   font-weight: 300;
   font-size: 42px;
-  color: #0F111A; /* light blue accent */
+  color: #0F111A;
   margin-bottom: 60px;
 }
 
@@ -261,17 +230,14 @@ nav {
   justify-content: space-between;
   gap: 40px;
   margin-bottom: 60px;
-  flex-wrap: wrap; /* for responsiveness */
-  /* padding-top: 50px; */
+  flex-wrap: wrap;
 }
 
-
 .business-text {
-  flex: 1 1 400px; /* text takes at least 400px, grows if space available */
-  font-weight: 300;       /* Light weight for elegance */
-  line-height: 1.5;       /* Makes text airy and readable */
-  letter-spacing: 0.5px;  /* Subtle spacing for elegance */
-  /* color: #000000;         Assuming a dark background   */
+  flex: 1 1 400px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 }
 
 .business-text p {
@@ -279,178 +245,51 @@ nav {
   line-height: 1.7;
 }
 
-
-/* Minimal Underline Button */
-.btn-explore {
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'Poppins', sans-serif;  /* same font */
-  font-weight: 300;                     /* light and elegant */
-  font-size: 21px;
-  color: #0F111A;                       /* adjust for your background */
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 2px;                  /* space for underline */
-  transition: all 0.3s ease;
-}
-
-/* Underline effect on hover */
-.btn-explore::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;           /* thickness of underline */
-  bottom: 0;
-  left: 0;
-  background-color: #0F111A;  /* same color as text */
-  transition: width 0.3s ease;
-}
-
-.btn-explore:hover::after {
-  width: 100%;           /* full underline appears on hover */
-}
-
-
-.business-lines .container {
-  max-width: 1700px;   /* same as navbar max-width */
-  margin: 0 auto;      /* centers container */
-  padding: 0 40px;     /* pushes content away from screen edges */
-}
-
-.business-img {
-  width: 1500px;       /* fill the parent flex width */
-  height: auto;      /* maintain aspect ratio */
-  max-width: 900px;  /* limit max width */
-  border-radius: 5px;
-}
-
 .business-image {
-  flex: 1 1 400px; /* image takes at least 400px, grows if space available */
+  flex: 1 1 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.get-in-touch {
-  background-color: #ffffff; /* changed from dark to light */
-  color: #1a1a1a; /* dark text for contrast */
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.get-in-touch .container {
+.business-img {
+  width: 1500px;
+  height: auto;
   max-width: 900px;
-  margin: 0 auto;
-}
-
-.get-in-touch h2 {
-  font-size: 42px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #1a1a1a; /* ensure title is dark */
-}
-
-.get-in-touch p {
-  font-size: 20px;
-  line-height: 1.7;
-  margin-bottom: 35px;
-  color: #555; /* slightly darker grey for readability */
-}
-
-/* Minimal Underline Button for Get in Touch */
-.get-in-touch .btn-contact {
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;          /* slightly bolder for clarity */
-  font-size: 21px;
-  color: #0F111A;            /* dark text for light background */
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 3px;       /* space for underline */
-  transition: all 0.3s ease;
-}
-
-/* Underline effect on hover */
-.get-in-touch .btn-contact::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;               /* thickness of underline */
-  bottom: 0;
-  left: 0;
-  background-color: #0F111A; /* same color as text */
-  transition: width 0.3s ease;
-}
-
-.get-in-touch .btn-contact:hover::after {
-  width: 100%;               /* full underline appears on hover */
-}
-
-/* Slider container */
-.slider {
-  position: relative;
-  /* width: 100%; */
-  /* margin: auto; */
-  /* overflow: hidden; */
-
-  width: 900px;       /* fill the parent flex width */
-  height: 500px;      /* maintain aspect ratio */
-  max-width: 900px;  /* limit max width */
   border-radius: 5px;
 }
 
-/* Slide images */
-.slide {
-  width: 900px;       /* fill the parent flex width */
-  height: 500px;      /* maintain aspect ratio */
-  display: none;
-  object-fit: cover;
-  transition: opacity 0.6s ease;
-  border-radius: 14px;
+/* Minimal underline button */
+.btn-explore {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 21px;
+  color: #0F111A;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
 }
 
-.slide.active {
-  display: block;
-  opacity: 1;
-}
-
-/* Arrows */
-.arrow {
+.btn-explore::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  backdrop-filter: blur(4px);
-  transition: 0.2s;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0F111A;
+  transition: width 0.3s ease;
 }
 
-.arrow:hover {
-  background: rgba(255, 255, 255, 0.7);
+.btn-explore:hover::after {
+  width: 100%;
 }
 
-/* Positioning */
-.left-arrow {
-  left: 10px;
-}
-
-.right-arrow {
-  right: 10px;
-}
-
-
-
-
-/* SERVICES SECTION */
+/* ===== Services Section ===== */
 .services {
-  background: #f8f9fc; /* light neutral background */
+  background: #f8f9fc;
   padding: 120px 20px;
   text-align: left;
 }
@@ -464,29 +303,22 @@ nav {
   font-size: 42px;
   font-weight: 300;
   color: #1E1E2F;
-  /* margin-bottom: 60px; */
   letter-spacing: 1px;
 }
 
 .services-subtitle {
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 21px;
-  color: #1E1E2F;  /* or your text color */
-  /* margin-top: 8px; */
+  color: #1E1E2F;
   margin-bottom: 60px;
 }
 
-
-
-/* Grid for service cards */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 60px;
 }
 
-/* Each card */
 .service-item {
   position: relative;
   height: 600px;
@@ -504,7 +336,6 @@ nav {
   transition: transform 0.6s ease, filter 0.4s ease;
 }
 
-/* Overlay title */
 .service-title {
   position: absolute;
   bottom: 0;
@@ -519,7 +350,6 @@ nav {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0) 100%);
 }
 
-/* Hover Effects */
 .service-item:hover img {
   transform: scale(1.08);
   filter: brightness(0.8);
@@ -530,17 +360,9 @@ nav {
   box-shadow: 0 12px 35px rgba(0,0,0,0.25);
 }
 
-
-/* :root{
-  --bg:#0b0f1a;
-  --panel:#11141a;
-  --accent:#68BDFE;
-  --muted:#C7D7EE;
-} */
-
-/* Section base */
+/* ===== Key Figures Section ===== */
 .key-figures {
-  background-color: transparent; /* or your section background */
+  background-color: transparent;
   color: #ffffff;
   padding: 80px 0;
   text-align: center;
@@ -552,11 +374,9 @@ nav {
 }
 
 .figures-title {
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size:38px;
+  font-size: 38px;
   margin-bottom: 100px;
-  text-align: center;
 }
 
 .figures-grid {
@@ -576,7 +396,7 @@ nav {
   font-size: 42px;
   font-weight: 300;
   color: #ffffff;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 
@@ -594,8 +414,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-
+/* ===== Locations Section ===== */
 .locations {
   background-color: #f8f9fc;
   padding: 100px 0;
@@ -605,7 +424,6 @@ nav {
 .locations-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0px;
   align-items: start;
   max-width: 1600px;
   margin: 0 auto;
@@ -613,7 +431,6 @@ nav {
 }
 
 .locations-intro {
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 32px;
   line-height: 1.6;
@@ -624,45 +441,41 @@ nav {
 
 .locations-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .locations-list li {
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 21px;
   color: #555;
   padding: 10px 0;
   cursor: pointer;
-  display: block; 
+  display: block;
   position: relative;
   transition: color 0.3s ease;
-  width: fit-content; /* line matches text width */
+  width: fit-content;
 }
 
-/* subtle underline on hover */
+/* Subtle underline on hover */
 .locations-list li::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
   width: 0;
-  height: 1px; /* consistent base */
+  height: 1px;
   background-color: #222;
-  transform: scaleY(1.5); /* scale visually to match 1.5px */
+  transform: scaleY(1.5);
   transform-origin: bottom;
   transition: width 0.3s ease, transform 0.3s ease;
 }
 
 .locations-list li:hover::after {
-  width: 100%; /* matches text width */
+  width: 100%;
 }
 
 .locations-list li:hover {
   color: #000;
 }
-
 
 .locations-map iframe {
   width: 100%;
@@ -672,42 +485,66 @@ nav {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.scroll-down {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  cursor: pointer;
-  z-index: 100;
+/* ===== Get in Touch Section ===== */
+.get-in-touch {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.scroll-down svg.arrow-svg {
+.get-in-touch .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.get-in-touch h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.get-in-touch p {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #555;
+}
+
+.get-in-touch .btn-contact {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 21px;
+  color: #0F111A;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
   transition: all 0.3s ease;
 }
 
-.scroll-down svg.arrow-svg:hover circle {
-  stroke-opacity: 0.6; /* Slightly transparent circle on hover */
+.get-in-touch .btn-contact::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0F111A;
+  transition: width 0.3s ease;
 }
 
-.scroll-down svg.arrow-svg:hover path {
-  stroke-opacity: 0.6; /* Slightly transparent arrow on hover */
+.get-in-touch .btn-contact:hover::after {
+  width: 100%;
 }
 
-
-#business-lines {
-  scroll-margin-top: 95px; /* adjusts scroll position */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* ===== Footer ===== */
 .footer {
-  background-color: #1E1E2F;; /* dark footer */
+  background-color: #1E1E2F;
   color: #f8f8f8;
   padding: 40px 20px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
@@ -716,4 +553,3 @@ html {
   max-width: 1200px;
   margin: 0 auto;
 }
-
