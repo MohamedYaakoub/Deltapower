@@ -1114,3 +1114,8 @@ html[dir="rtl"] .footer h4 {
     transform: none;
   }
 }
+
+/* Banner photo anchored to its bottom edge */
+.page-hero-media--bottom {
+  object-position: center bottom;
+}
