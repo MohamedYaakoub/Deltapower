@@ -1,20 +1,13 @@
-/* ===== Services overview: navy band behind the heading and the top of the first row ===== */
+/* ===== Services overview: white band behind the heading and the top of the first row,
+   off-white behind the rest of the grid ===== */
 .services-overview {
   padding-bottom: clamp(32px, 5vw, 72px);
+  background: var(--bg-soft);
 }
 
 .services-band {
   padding-block: var(--section-y) 200px;
-  background: var(--ink);
-  color: var(--text-on-dark);
-}
-
-.services-band h2 {
-  color: #fff;
-}
-
-.services-band .lead {
-  color: var(--text-on-dark-muted);
+  background: var(--bg);
 }
 
 .service-grid {
