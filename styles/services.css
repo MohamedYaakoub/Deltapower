@@ -1,14 +1,34 @@
-/* ===== Services grid ===== */
+/* ===== Services overview: navy band behind the heading and the top of the first row ===== */
+.services-overview {
+  padding-bottom: clamp(32px, 5vw, 72px);
+}
+
+.services-band {
+  padding-block: var(--section-y) 200px;
+  background: var(--ink);
+  color: var(--text-on-dark);
+}
+
+.services-band h2 {
+  color: #fff;
+}
+
+.services-band .lead {
+  color: var(--text-on-dark-muted);
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 48px clamp(24px, 3vw, 40px);
+  gap: 0 clamp(24px, 3vw, 40px);
+  margin-top: -200px;
 }
 
 .service-item {
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+  margin-bottom: 48px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -65,7 +85,12 @@
 }
 
 @media (max-width: 640px) {
+  .services-band {
+    padding-bottom: 140px;
+  }
+
   .service-grid {
     grid-template-columns: 1fr;
+    margin-top: -140px;
   }
 }
